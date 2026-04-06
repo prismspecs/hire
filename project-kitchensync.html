@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KitchenSync - Creative Technhology Portfolio</title>
-    <meta name="description" content="KitchenSync is a plug-and-play synchronized video playback and automation system built on affordable Raspberry Pi hardware. Unlike expensive proprietary solutions like BrightSign ($300-2000+ per node), KitchenSync provides superior flexibility at under $200 per node, transforming displays into intelligent automation hubs capable of controlling external devices such as DMX lighting.">
+    <meta name="description"
+        content="KitchenSync is a plug-and-play synchronized video playback and automation system built on affordable Raspberry Pi hardware. Unlike expensive proprietary solutions like BrightSign ($300-2000+ per node), KitchenSync provides superior flexibility at under $200 per node, transforming displays into intelligent automation hubs capable of controlling external devices such as DMX lighting.">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Grayson Earle</a>
-            <ul class="nav-links">
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="mailto:studio@graysonearle.com">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <main style="margin-top: 100px;">
-        <div class="project-detail">
-            <a href="index.html" class="back-button">← Back to Projects</a>
-            
-            <div class="project-header">
-                <h1 class="project-title">KitchenSync</h1>
-                <div class="project-info">
-                    <div class="project-info-item"><strong>Medium:</strong> Open-source Hardware and Software</div>
-                    
-                    <div class="project-info-item"><strong>Role:</strong> Creator &amp; Lead Developer</div>
-                    <div class="project-info-item"><strong>Context:</strong> Exhibited at Proof of Work, Krull Stiftung art prize, Berlin, September 2025</div>
+<body>
+    <div class="layout">
+
+        <main class="detail-main">
+            <div class="detail-header">
+                <span class="detail-title">KitchenSync</span>
+                <span class="detail-year"></span>
+            </div>
+            <div class="detail-hero">
+                <img src="assets/images/kitchensync/installation-view1.jpg"
+                    alt="Multi-screen synchronized video installation at Berlin exhibition.">
+            </div>
+            <div class="detail-body">
+                <div class="detail-meta">
+                    <p>Medium: Open-source Hardware and Software</p>
+                    <p>Role: Creator &amp; Lead Developer</p>
+                    <p>Context: Exhibited at Proof of Work, Krull Stiftung art prize, Berlin, September 2025</p>
+                    <p>Built with Python 3.9+, VLC media player, and systemd services.<br>
+                        Sub-10ms synchronization accuracy using UDP broadcast protocol.<br>
+                        USB-based automatic configuration and media delivery.<br>
+                        Serial protocol support (MIDI, OSC) for hardware integration.<br>
+                        WebSocket integration for remote monitoring and control.</p>
+                    <p>Deployed at Proof of Work by Johannes Büttner, part of the Krull Stiftung art prize in Berlin,
+                        September 2025.</p>
+                </div>
+                <div class="detail-desc">
+                    <p>KitchenSync is a plug-and-play synchronized video playback and automation system built on
+                        affordable Raspberry Pi hardware. Unlike expensive proprietary solutions like BrightSign
+                        ($300–2000+ per node), KitchenSync provides superior flexibility at under $200 per node,
+                        transforming displays into intelligent automation hubs capable of controlling external devices
+                        such as DMX lighting.</p>
+                    <a href="https://github.com/prismspecs/kitchenSync" target="_blank"
+                        class="project-link">github.com/prismspecs/kitchenSync</a>
                 </div>
             </div>
-
-            <div class="project-description">KitchenSync is a plug-and-play synchronized video playback and automation system built on affordable Raspberry Pi hardware. Unlike expensive proprietary solutions like BrightSign ($300-2000+ per node), KitchenSync provides superior flexibility at under $200 per node, transforming displays into intelligent automation hubs capable of controlling external devices such as DMX lighting.</div>
-
-            
-            <div class="project-details">
-                <h3>Details</h3>
-                <ul>
-                    <li>Built with Python 3.9+, VLC media player, and systemd services</li>
-<li>Sub-10ms synchronization accuracy using UDP broadcast protocol</li>
-<li>USB-based automatic configuration and media delivery</li>
-<li>Serial protocol support (MIDI, OSC) for hardware integration</li>
-<li>WebSocket integration for remote monitoring and control</li>
-<li></li>
-<li>Deployed at Proof of Work by Johannes Büttner, part of the Krull Stiftung art prize in Berlin, September 2025. The exhibition validated system reliability and revealed critical insights about synchronization edge cases and user experience workflows.</li>
-                </ul>
+            <div class="detail-images">
+                <div class="image-container">
+                    <img src="assets/images/kitchensync/installation-view2.jpg"
+                        alt="KitchenSync synchronized 11 displays and allowed the artist to rotate them using motors connected to the devices.">
+                    <p class="image-caption">KitchenSync synchronized 11 displays and allowed the artist to rotate them
+                        using motors connected to the devices.</p>
+                </div>
+                <div class="image-container">
+                    <img src="assets/images/kitchensync/pi-case.webp" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="assets/images/kitchensync/installation-view-vertical.jpg" alt="">
+                </div>
             </div>
-            
+            <nav class="detail-nav">
+                <a href="index.html">Index</a>
+                <a href="project-medbed.html">Next →</a>
+            </nav>
+        </main>
 
-            <a href="https://github.com/prismspecs/kitchenSync" target="_blank" class="project-link">https://github.com/prismspecs/kitchenSync</a>
-
-            <div class="project-images">
-                
-                    <div class="image-container">
-                        <img src="assets/images/kitchensync/installation-view1.jpg" alt="Multi-screen synchronized video installation at Berlin exhibition.">
-                        <p class="image-caption">Multi-screen synchronized video installation at Berlin exhibition.</p>
-                    </div>
-                
-
-                    <div class="image-container">
-                        <img src="assets/images/kitchensync/installation-view2.jpg" alt="KitchenSync synchronized 11 displays and allowed the artist to rotate them using motors connected to the devices.">
-                        <p class="image-caption">KitchenSync synchronized 11 displays and allowed the artist to rotate them using motors connected to the devices.</p>
-                    </div>
-                
-
-                    <div class="image-container">
-                        <img src="assets/images/kitchensync/pi-case.webp" alt="KitchenSync">
-                        
-                    </div>
-                
-
-                    <div class="image-container">
-                        <img src="assets/images/kitchensync/installation-view-vertical.jpg" alt="KitchenSync">
-                        
-                    </div>
-                
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <p class="sidebar-name">Grayson Earle</p>
+                <p class="sidebar-intro">creative technologist,
+                    artist, and educator
+                    working at the intersection
+                    of software, hardware,
+                    and social practice</p>
+                <nav class="sidebar-nav">
+                    <a href="mailto:studio@graysonearle.com">studio@graysonearle.com</a>
+                </nav>
+                <p class="sidebar-copyright">© 2026</p>
             </div>
-        </div>
-    </main>
+        </aside>
 
-    <footer>
-        <p>&copy; 2025 Grayson Earle. All rights reserved.</p>
-    </footer>
+    </div>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
