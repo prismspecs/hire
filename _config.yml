@@ -1,0 +1,14 @@
+title: Grayson Earle
+url: https://hire.graysonearle.com
+
+collections:
+  projects:
+    output: true
+    permalink: /:slug.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project

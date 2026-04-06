@@ -1,121 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grayson Earle</title>
-    <meta name="description" content="Selected Works in digital fabrication, creative coding, and physical computing">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-    <div class="layout">
-
-        <main class="projects-list">
-
-            <a href="project-automated-ground-station.html" class="project-row">
-                <div class="project-thumb">
-                    <img src="assets/images/automated-ground-station/box1.jpg"
-                        alt="open-weather Automatic Ground Station">
-                </div>
-                <div class="project-body">
-                    <h2 class="project-title">open-weather Automatic Ground Station</h2>
-                    <p class="project-desc">The open-weather Automatic Ground Station (AGS) is an open-source Raspberry
-                        Pi-based radio receiver that automatically captures satellite imagery from NOAA weather
-                        satellites.</p>
-                    <span class="read-more">Read more</span>
-                </div>
-                <div class="project-meta">
-                    <span class="project-year">2024–2025</span>
-                    <span class="project-medium">Open-source Hardware<br>and Software</span>
-                </div>
-                <div class="project-icon">◉</div>
-            </a>
-            <a href="project-kitchensync.html" class="project-row">
-                <div class="project-thumb">
-                    <img src="assets/images/kitchensync/installation-view1.jpg" alt="KitchenSync">
-                </div>
-                <div class="project-body">
-                    <h2 class="project-title">KitchenSync</h2>
-                    <p class="project-desc">KitchenSync is a plug-and-play synchronized video playback and automation
-                        system built on affordable Raspberry Pi hardware.</p>
-                    <span class="read-more">Read more</span>
-                </div>
-                <div class="project-meta">
-                    <span class="project-year"></span>
-                    <span class="project-medium">Open-source Hardware<br>and Software</span>
-                </div>
-                <div class="project-icon">▷</div>
-            </a>
-            <a href="project-medbed.html" class="project-row">
-                <div class="project-thumb">
-                    <img src="assets/images/medbed/installation-view-front.jpg" alt="MedBed">
-                </div>
-                <div class="project-body">
-                    <h2 class="project-title">MedBed</h2>
-                    <p class="project-desc">MedBed is an interactive sculpture inspired by the conspiracy myth of a
-                        medical device that can heal all illnesses and extend life.</p>
-                    <span class="read-more">Read more</span>
-                </div>
-                <div class="project-meta">
-                    <span class="project-year">2023</span>
-                    <span class="project-medium">Custom Software<br>and Hardware</span>
-                </div>
-                <div class="project-icon">✚</div>
-            </a>
-            <a href="project-bail-bloc.html" class="project-row">
-                <div class="project-thumb">
-                    <img src="assets/images/bail-bloc/title.png" alt="Bail Bloc">
-                </div>
-                <div class="project-body">
-                    <h2 class="project-title">Bail Bloc</h2>
-                    <p class="project-desc">Bail Bloc was a desktop application that bailed people out of jail by mining
-                        cryptocurrency, operating as a distributed crypto mining operation.</p>
-                    <span class="read-more">Read more</span>
-                </div>
-                <div class="project-meta">
-                    <span class="project-year">2017–2023</span>
-                    <span class="project-medium">Cryptocurrency Mining<br>Application</span>
-                </div>
-                <div class="project-icon">○</div>
-            </a>
-            <a href="project-project-interactive-installation.html" class="project-row">
-                <div class="project-thumb">
-                    <img src="assets/images/project-interactive-installation/big-screen.png"
-                        alt="All City Express (A.C.E.)">
-                </div>
-                <div class="project-body">
-                    <h2 class="project-title">All City Express (A.C.E.)</h2>
-                    <p class="project-desc">An interactive art installation at the Panorama music festival in New York
-                        City paying homage to graffiti art's NYC roots.</p>
-                    <span class="read-more">Read more</span>
-                </div>
-                <div class="project-meta">
-                    <span class="project-year">2019</span>
-                    <span class="project-medium">Large Scale Interactive<br>Installation</span>
-                </div>
-                <div class="project-icon">✦</div>
-            </a>
-
-        </main>
-
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <p class="sidebar-name">Grayson Earle</p>
-                <p class="sidebar-intro">creative technologist,
-                    artist, and educator
-                    working at the intersection
-                    of software, hardware,
-                    and social practice</p>
-                <nav class="sidebar-nav">
-                    <a href="mailto:studio@graysonearle.com">studio@graysonearle.com</a>
-                </nav>
-                <p class="sidebar-copyright">© 2026</p>
-
-            </div>
-
-            <script src="assets/js/main.js"></script>
-</body>
-
-</html>
+---
+layout: default
+---
+<main class="projects-list">
+    {% for project in site.projects %}
+    <a href="{{ project.url | relative_url }}" class="project-row">
+        <div class="project-thumb">
+            <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}">
+        </div>
+        <div class="project-body">
+            <h2 class="project-title">{{ project.title }}</h2>
+            <p class="project-desc">{{ project.short_desc }}</p>
+            <span class="read-more">Read more</span>
+        </div>
+        <div class="project-meta">
+            <span class="project-year">{{ project.year }}</span>
+            <span class="project-medium">{{ project.medium }}</span>
+        </div>
+        <div class="project-icon">{{ project.icon }}</div>
+    </a>
+    {% endfor %}
+</main>

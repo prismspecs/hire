@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% assign projects = site.projects %}
+{% assign current_index = nil %}
+{% for p in projects %}
+{% if p.url == page.url %}
+{% assign current_index = forloop.index0 %}
+{% endif %}
+{% endfor %}
+{% assign next_index = current_index | plus: 1 %}
+{% assign prev_index = current_index | minus: 1 %}
+{% if next_index >= projects.size %}{% assign next_index = 0 %}{% endif %}
+{% if prev_index < 0 %}{% assign prev_index=projects.size | minus: 1 %}{% endif %} {% assign
+    next_project=projects[next_index] %} <main class="detail-main">
+    <div class="detail-header">
+        <span class="detail-title">{{ page.title }}</span>
+        <span class="detail-year">{{ page.year }}</span>
+    </div>
+    <div class="detail-hero">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt | default: page.title }}">
+    </div>
+    <div class="detail-body">
+        <div class="detail-meta">
+            {% for item in page.meta %}
+            <p>{{ item }}</p>
+            {% endfor %}
+        </div>
+        <div class="detail-desc">
+            {{ content }}
+            {% if page.link %}
+            <a href="{{ page.link.url }}" target="_blank" class="project-link">{{ page.link.text }}</a>
+            {% endif %}
+        </div>
+    </div>
+    {% if page.images %}
+    <div class="detail-images">
+        {% for img in page.images %}
+        <div class="image-container">
+            <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: '' }}">
+            {% if img.caption %}
+            <p class="image-caption">{{ img.caption }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <nav class="detail-nav">
+        <a href="{{ '/' | relative_url }}">Index</a>
+        <a href="{{ next_project.url | relative_url }}">Next &rarr;</a>
+    </nav>
+    </main>

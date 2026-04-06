@@ -21,6 +21,7 @@
 
 html {
     font-size: 11px;
+    overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,8 @@ body {
     line-height: 1.55;
     color: var(--text);
     background: var(--bg);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -42,6 +45,7 @@ a {
     display: grid;
     grid-template-columns: 1fr var(--sidebar-width);
     min-height: 100vh;
+    width: 100%;
 }
 
 /* =====================
