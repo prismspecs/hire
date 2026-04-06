@@ -5,7 +5,14 @@ layout: default
     {% for project in site.projects %}
     <a href="{{ project.url | relative_url }}" class="project-row">
         <div class="project-thumb">
-            <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}">
+            <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}" class="thumb-slide active">
+            {% if project.images %}
+            {% for img in project.images %}
+            <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: project.title }}" class="thumb-slide">
+            {% endfor %}
+            <div class="slide-zone slide-zone-prev"></div>
+            <div class="slide-zone slide-zone-next"></div>
+            {% endif %}
         </div>
         <div class="project-body">
             <h2 class="project-title">{{ project.title }}</h2>
