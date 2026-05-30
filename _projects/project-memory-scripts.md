@@ -24,8 +24,9 @@ images:
     caption: "Detail of the 'Memory Scripts' animation, which uses archival images and hand-drawn elements."
   - src: assets/images/memory-scripts/projection-mapping-artist.jpg
     alt: "The projection mapping in progress with the artist."
-  - src: assets/images/memory-scripts/drawing-on-building.jpg
-    alt: "A still from the 'drawing on the building' feature."
+  - src: assets/images/memory-scripts/writing-animation.gif
+    alt: "Outcome of custom projection mapping software."
+    caption: "The outcome of a custom projection mapping application that allows artists to draw directly onto an image of the facade. The software performs screen to world matrix transformations to generate alpha ready video files for projection."
   - src: assets/images/memory-scripts/dual-projector-setup.jpg
     alt: "The dual 30,000 ANSI lumen projector setup."
   - src: assets/images/memory-scripts/artist-and-crew.jpg
