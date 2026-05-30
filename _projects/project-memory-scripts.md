@@ -11,6 +11,7 @@ hero_image: assets/images/memory-scripts/wideshot-projection.jpg
 hero_alt: "Memory Scripts projection on the Abgeordnetenhaus Berlin facade."
 meta:
   - "Medium: Projection Mapping & DMX Lighting"
+  - "Technical: 3D-to-2D View Distortion Mapping"
   - "Role: Projection Designer, Technical Consultant, & DMX Lighting Designer"
   - "Context: 25th Anniversary of the Windhoek-Berlin City Partnership"
   - "Artist: Vitjitua Ndjiharine"
@@ -48,4 +49,4 @@ images:
 
 The project involved a tight collaboration with artist Vitjitua Ndjiharine, translating her multidisciplinary practice into a large-scale architectural intervention. The installation features animated text that moves like a "programming script," layering collective and individual memories across the historical façade. 
 
-Technically, I developed a custom projection mapping application that streamlined the artist's workflow by allowing for direct drawing on architectural images, which the software then transformed using screen to world matrix calculations for accurate projection mapping. The final system utilized two 30,000 ANSI lumen projectors and the Resolume platform, integrated with a DMX lighting system I designed to provide a cohesive visual atmosphere across the entire building.
+Technically, I developed a custom projection mapping application that streamlined the artist's workflow by allowing for direct drawing on architectural images. The software automates the 3D-to-2D projection warp, managing complex view distortion through screen-to-world matrix calculations to ensure accurate alignment on the varied surfaces of the historical facade. The final system utilized two 30,000 ANSI lumen projectors and the Resolume platform, integrated with a DMX lighting system I designed to provide a cohesive visual atmosphere across the entire building.
