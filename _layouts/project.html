@@ -37,7 +37,11 @@ layout: default
     <div class="detail-images">
         {% for img in page.images %}
         <div class="image-container">
+            {% if img.src contains '.mp4' %}
+            <video src="{{ img.src | relative_url }}" controls muted loop playsinline alt="{{ img.alt | default: '' }}"></video>
+            {% else %}
             <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: '' }}">
+            {% endif %}
             {% if img.caption %}
             <p class="image-caption">{{ img.caption }}</p>
             {% endif %}

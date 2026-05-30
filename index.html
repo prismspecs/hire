@@ -8,7 +8,11 @@ layout: default
             <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}" class="thumb-slide active">
             {% if project.images %}
             {% for img in project.images %}
+            {% if img.src contains '.mp4' %}
+            <video src="{{ img.src | relative_url }}" muted loop playsinline class="thumb-slide"></video>
+            {% else %}
             <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: project.title }}" class="thumb-slide">
+            {% endif %}
             {% endfor %}
             <div class="slide-zone slide-zone-prev"></div>
             <div class="slide-zone slide-zone-next"></div>
