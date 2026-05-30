@@ -1,13 +1,14 @@
 ---
 title: "Memory Scripts"
 slug: project-memory-scripts
+date: 2026-05-30
 year: "2025"
-short_desc: "Memory Scripts is a projection mapping installation on the façade of the Abgeordnetenhaus Berlin, exploring collective and individual memories of Windhoek and Berlin."
+short_desc: "Memory Scripts is a projection mapping installation on the facade of the Abgeordnetenhaus Berlin, exploring collective and individual memories of Windhoek and Berlin."
 medium: "Projection Mapping"
 icon: "◆"
 thumb: assets/images/memory-scripts/wideshot-projection.jpg
 hero_image: assets/images/memory-scripts/wideshot-projection.jpg
-hero_alt: "Memory Scripts projection on the Abgeordnetenhaus Berlin façade."
+hero_alt: "Memory Scripts projection on the Abgeordnetenhaus Berlin facade."
 meta:
   - "Medium: Projection Mapping"
   - "Role: Projection Designer & Technical Consultant"
