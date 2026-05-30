@@ -4,15 +4,15 @@ slug: project-memory-scripts
 order: 1
 year: "2025"
 short_desc: "A projection mapping installation featuring a custom tool for artists to draw real-time animations directly onto a facade which is then perspective warped for projection."
-medium: "Projection Mapping<br>& DMX Lighting"
+medium: "Projection Mapping and custom<br>inverse projection mapping tool"
 icon: "◆"
 thumb: assets/images/memory-scripts/wideshot-projection.jpg
 hero_image: assets/images/memory-scripts/wideshot-projection.jpg
 hero_alt: "Memory Scripts projection on the Abgeordnetenhaus Berlin facade."
 meta:
-  - "Medium: Projection Mapping & DMX Lighting"
+  - "Medium: Projection Mapping and custom inverse projection mapping tool"
   - "Technical: 3D-to-2D View Distortion Mapping"
-  - "Role: Projection Designer, Technical Consultant, & DMX Lighting Designer"
+  - "Role: Projection Designer & Technical Consultant"
   - "Context: 25th Anniversary of the Windhoek-Berlin City Partnership"
   - "Artist: Vitjitua Ndjiharine"
   - "Technical Coordination: Thomas (PAM), Erik"
