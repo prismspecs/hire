@@ -22,7 +22,7 @@ images:
   - src: assets/images/automated-ground-station/hardware1.jpg
     alt: "Assembled ground station components including Raspberry Pi and radio receiver."
     caption: "Assembled ground station components including Raspberry Pi and radio receiver."
-  - src: assets/images/automated-ground-station/hardware2.png
+  - src: assets/images/automated-ground-station/hardware2.jpg
   - src: assets/images/automated-ground-station/hardware3.jpg
   - src: assets/images/automated-ground-station/satelite1.jpg
   - src: assets/images/automated-ground-station/satelite2.jpg

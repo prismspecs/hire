@@ -21,7 +21,7 @@ images:
   - src: assets/images/kitchensync/installation-view2.jpg
     alt: "KitchenSync synchronized 11 displays and allowed the artist to rotate them using motors connected to the devices."
     caption: "KitchenSync synchronized 11 displays and allowed the artist to rotate them using motors connected to the devices."
-  - src: assets/images/kitchensync/pi-case.webp
+  - src: assets/images/kitchensync/pi-case.jpg
   - src: assets/images/kitchensync/installation-view-vertical.jpg
 ---
 

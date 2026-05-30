@@ -5,8 +5,8 @@ year: "2017–2023"
 short_desc: "Bail Bloc was a desktop application that bailed people out of jail by mining cryptocurrency, operating as a distributed crypto mining operation."
 medium: "Cryptocurrency Mining<br>Application"
 icon: "○"
-thumb: assets/images/bail-bloc/title.png
-hero_image: assets/images/bail-bloc/title.png
+thumb: assets/images/bail-bloc/title.jpg
+hero_image: assets/images/bail-bloc/title.jpg
 hero_alt: "Bail Bloc"
 meta:
   - "Medium: Cryptocurrency Mining Application / Rhetorical Software"
