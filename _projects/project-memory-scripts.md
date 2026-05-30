@@ -3,7 +3,7 @@ title: "Memory Scripts"
 slug: project-memory-scripts
 order: 1
 year: "2025"
-short_desc: "A projection mapping installation on the Abgeordnetenhaus Berlin featuring custom 3D-to-2D projection warp and view distortion software to explore collective memory."
+short_desc: "A projection mapping installation featuring a custom tool for artists to draw real-time animations directly onto a facade which is then perspective warped for projection."
 medium: "Projection Mapping<br>& DMX Lighting"
 icon: "◆"
 thumb: assets/images/memory-scripts/wideshot-projection.jpg
