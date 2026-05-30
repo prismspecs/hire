@@ -2,7 +2,8 @@
 layout: default
 ---
 <main class="projects-list">
-    {% for project in site.projects %}
+    {% assign projects = site.projects | sort: "order" %}
+    {% for project in projects %}
     <a href="{{ project.url | relative_url }}" class="project-row">
         <div class="project-thumb">
             <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}" class="thumb-slide active">

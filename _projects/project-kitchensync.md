@@ -1,6 +1,7 @@
 ---
 title: "KitchenSync"
 slug: project-kitchensync
+order: 4
 year: ""
 short_desc: "KitchenSync is a plug-and-play synchronized video playback and automation system built on affordable Raspberry Pi hardware."
 medium: "Open-source Hardware<br>and Software"

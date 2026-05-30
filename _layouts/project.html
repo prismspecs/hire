@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign projects = site.projects %}
+{% assign projects = site.projects | sort: "order" %}
 {% assign current_index = nil %}
 {% for p in projects %}
 {% if p.url == page.url %}

@@ -1,6 +1,7 @@
 ---
 title: "open-weather Automatic Ground Station"
 slug: project-automated-ground-station
+order: 2
 year: "2024–2025"
 short_desc: "The open-weather Automatic Ground Station (AGS) is an open-source Raspberry Pi-based radio receiver that automatically captures satellite imagery from NOAA weather satellites."
 medium: "Open-source Hardware<br>and Software"

@@ -1,6 +1,7 @@
 ---
 title: "Bail Bloc"
 slug: project-bail-bloc
+order: 3
 year: "2017–2023"
 short_desc: "Bail Bloc was a desktop application that bailed people out of jail by mining cryptocurrency, operating as a distributed crypto mining operation."
 medium: "Cryptocurrency Mining<br>Application"

@@ -1,6 +1,7 @@
 ---
 title: "Memory Scripts"
 slug: project-memory-scripts
+order: 1
 year: "2025"
 short_desc: "Memory Scripts is a projection mapping installation on the facade of the Abgeordnetenhaus Berlin, exploring collective and individual memories of Windhoek and Berlin."
 medium: "Projection Mapping"

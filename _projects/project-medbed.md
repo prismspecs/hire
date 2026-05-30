@@ -1,7 +1,8 @@
 ---
 title: "MedBed"
 slug: project-medbed
-year: "2023"
+order: 5
+year: "2024"
 short_desc: "MedBed is an interactive sculpture inspired by the conspiracy myth of a medical device that can heal all illnesses and extend life."
 medium: "Custom Software<br>and Hardware"
 icon: "✚"
