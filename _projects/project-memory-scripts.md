@@ -39,6 +39,7 @@ images:
     caption: "The outcome of the custom software, showing the final hand-drawn quality translated to the architectural scale of the building."
   - src: assets/images/memory-scripts/dual-projector-setup.jpg
     alt: "The dual 30,000 ANSI lumen projector setup."
+    caption: "The technical installation utilized two 30,000 ANSI lumen projectors and a Resolume media server. Managing the technical requirements and significant budget for such a large-scale public work involved precise coordination between the municipal government and specialized event providers."
   - src: assets/images/memory-scripts/artist-and-crew.jpg
     alt: "Artist Vitjitua Ndjiharine with the technical crew."
 ---
