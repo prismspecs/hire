@@ -27,7 +27,7 @@ images:
   - src: assets/images/memory-scripts/projection-detail.jpg
     alt: "Detail of the animated text projection."
     caption: "Detail of the 'Memory Scripts' animation, which uses archival images and hand-drawn elements."
-  - src: assets/images/memory-scripts/brown-windows-camera-pan.mp4
+  - src: assets/images/memory-scripts/brown-windows-camera-pan_v2.mp4
     alt: "Production mockup video of the projections."
     caption: "A production mockup video demonstrating the projections as they were developed for the historical façade."
   - src: assets/images/memory-scripts/projection-mapping-artist.jpg
