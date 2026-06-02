@@ -10,7 +10,7 @@ layout: default
             {% if project.images %}
             {% for img in project.images %}
             {% if img.src contains '.mp4' %}
-            <video muted loop playsinline preload="none" class="thumb-slide">
+            <video muted loop playsinline preload="none" poster="{{ img.src | replace: '.mp4', '.jpg' | relative_url }}" class="thumb-slide">
                 <source src="{{ img.src | replace: '.mp4', '.webm' | relative_url }}" type="video/webm">
                 <source src="{{ img.src | relative_url }}" type="video/mp4">
             </video>
