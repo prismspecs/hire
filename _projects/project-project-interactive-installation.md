@@ -19,8 +19,6 @@ link:
   url: https://www.aststudios.com/portfolio/ace-microdoc/
   text: aststudios.com/portfolio/ace-microdoc
 images:
-  - vimeo_id: "180945410"
-    caption: "A.C.E. Microdoc"
   - src: assets/images/project-interactive-installation/render1.jpg
     alt: "A 3D render of the initial concept."
     caption: "A 3D render of the initial concept."
