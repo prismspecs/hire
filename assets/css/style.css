@@ -90,16 +90,19 @@ a {
     height: 100%;
     object-fit: cover;
     opacity: 0;
+    display: none;
     transition: opacity 0.3s ease;
 }
 
 .thumb-slide:first-child {
     position: relative;
+    display: block;
     visibility: hidden;
 }
 
 .thumb-slide.active {
     opacity: 1;
+    display: block;
     visibility: visible;
 }
 
