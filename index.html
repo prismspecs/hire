@@ -9,7 +9,9 @@ layout: default
             <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}" class="thumb-slide active">
             {% if project.images %}
             {% for img in project.images %}
-            {% if img.src contains '.mp4' %}
+            {% if img.vimeo_id %}
+            <img src="{{ '/assets/images/project-interactive-installation/vimeo-' | append: img.vimeo_id | append: '.jpg' | relative_url }}" alt="{{ img.caption | default: project.title }}" class="thumb-slide" loading="lazy">
+            {% elsif img.src contains '.mp4' %}
             <video muted loop playsinline preload="none" poster="{{ img.src | replace: '.mp4', '.jpg' | relative_url }}" class="thumb-slide">
                 <source src="{{ img.src | replace: '.mp4', '.webm' | relative_url }}" type="video/webm">
                 <source src="{{ img.src | relative_url }}" type="video/mp4">
