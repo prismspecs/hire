@@ -203,7 +203,7 @@ a {
 .sidebar-copyright {
     font-size: 0.9rem;
     color: var(--muted);
-    margin-top: auto;
+    margin-top: 1rem;
 }
 
 .sidebar-name {
