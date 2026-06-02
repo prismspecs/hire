@@ -35,7 +35,7 @@ images:
   - src: assets/images/memory-scripts/scribble.mp4
     alt: "Custom projection mapping tool demonstration."
     caption: "A demonstration of my custom projection mapping software. It allows artists to draw directly onto an image of the building facade, performing screen to world matrix transformations to generate projection-distortion corrected, alpha-ready video files."
-  - src: assets/images/memory-scripts/writing-animation.gif
+  - src: assets/images/memory-scripts/writing-animation.mp4
     alt: "Outcome of custom projection mapping software."
     caption: "The outcome of the custom software, showing the final hand-drawn quality translated to the architectural scale of the building."
   - src: assets/images/memory-scripts/dual-projector-setup.jpg

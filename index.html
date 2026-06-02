@@ -10,12 +10,12 @@ layout: default
             {% if project.images %}
             {% for img in project.images %}
             {% if img.src contains '.mp4' %}
-            <video muted loop playsinline class="thumb-slide">
+            <video muted loop playsinline preload="none" class="thumb-slide">
                 <source src="{{ img.src | replace: '.mp4', '.webm' | relative_url }}" type="video/webm">
                 <source src="{{ img.src | relative_url }}" type="video/mp4">
             </video>
             {% else %}
-            <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: project.title }}" class="thumb-slide">
+            <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: project.title }}" class="thumb-slide" loading="lazy">
             {% endif %}
             {% endfor %}
             <div class="slide-zone slide-zone-prev"></div>

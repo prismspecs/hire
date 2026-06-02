@@ -42,13 +42,13 @@ layout: default
                 <iframe src="https://player.vimeo.com/video/{{ img.vimeo_id }}" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
             {% elsif img.src contains '.mp4' %}
-            <video controls muted loop playsinline poster="{{ img.src | replace: '.mp4', '.jpg' | relative_url }}">
+            <video controls muted loop playsinline preload="none" poster="{{ img.src | replace: '.mp4', '.jpg' | relative_url }}">
                 <source src="{{ img.src | replace: '.mp4', '.webm' | relative_url }}" type="video/webm">
                 <source src="{{ img.src | relative_url }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             {% else %}
-            <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: '' }}">
+            <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: '' }}" loading="lazy">
             {% endif %}
             {% if img.caption %}
             <p class="image-caption">{{ img.caption }}</p>
