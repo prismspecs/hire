@@ -356,6 +356,65 @@ a {
 }
 
 /* =====================
+   Sidebar — more link
+   ===================== */
+.sidebar-more {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sidebar-more:hover {
+    color: var(--text);
+}
+
+/* =====================
+   ABOUT PAGE
+   ===================== */
+.about-main {
+    border-right: 1px solid var(--border);
+    padding: 2.4rem 2.4rem 3rem;
+}
+
+.about-heading {
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.2rem;
+}
+
+.about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 680px;
+}
+
+.about-body p {
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.about-back {
+    display: inline-block;
+    margin-top: 2.4rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.about-back:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* =====================
    Responsive
    ===================== */
 @media (max-width: 900px) {
