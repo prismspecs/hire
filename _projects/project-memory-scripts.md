@@ -1,5 +1,5 @@
 ---
-title: "Memory Scripts"
+title: "Memory Scripts Projection Mapping"
 slug: project-memory-scripts
 order: 1
 year: "2025"
