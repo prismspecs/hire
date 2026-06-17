@@ -1,7 +1,7 @@
 ---
 title: "Jurassic Park"
 slug: project-jurassic-park
-order: 7
+order: 0
 year: "2025"
 short_desc: "A participatory cinematic performance where an AI director guides the audience through a live remake of Jurassic Park."
 medium: "Interactive AI-Cinema<br>Performance"

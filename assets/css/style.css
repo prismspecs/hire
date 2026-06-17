@@ -192,8 +192,8 @@ a {
     padding: 2rem 1.6rem;
     position: sticky;
     top: 0;
-    height: 100vh;
-    overflow-y: auto;
+    align-self: start;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -426,7 +426,7 @@ a {
 
     .sidebar {
         position: static;
-        height: auto;
+        min-height: auto;
         border-top: 1px solid var(--border);
         padding: 1.5rem;
     }
