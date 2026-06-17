@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grayson Earle — Portfolio</title>
+    <link rel="stylesheet" href="{{ '/assets/css/pdf.css' | relative_url }}">
+</head>
+<body>
+
+<!-- ===================== COVER ===================== -->
+<div class="page page-cover">
+    <div class="cover-body">
+        <div class="cover-name">GRAYSON<br>EARLE</div>
+        <div class="cover-rule"></div>
+        <div class="cover-tagline">Creative Technologist<br>& Systems Architect</div>
+    </div>
+    <div class="cover-contact">
+        <span>studio@graysonearle.com</span>
+        <span>hire.graysonearle.com</span>
+        <span>Berlin — {{ site.time | date: "%Y" }}</span>
+    </div>
+</div>
+
+<!-- ===================== PROJECTS ===================== -->
+{% assign projects = site.projects | sort: "order" %}
+{% for project in projects %}
+<div class="page page-project">
+
+    <div class="project-header">
+        <div class="project-header-left">
+            <span class="project-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <h2 class="project-title">{{ project.title | upcase }}</h2>
+        </div>
+        <span class="project-year">{{ project.year }}</span>
+    </div>
+    <div class="project-medium">{{ project.medium | replace: '<br>', ' ' | strip_html }}</div>
+
+    <div class="project-rule"></div>
+
+    {% if project.hero_image %}
+    <div class="project-hero">
+        <img src="{{ project.hero_image | relative_url }}" alt="{{ project.title }}">
+    </div>
+    {% endif %}
+
+    <div class="project-body">
+        <div class="project-meta-col">
+            {% for item in project.meta %}
+            <p>{{ item | replace: '<br>', ' ' | strip_html }}</p>
+            {% endfor %}
+        </div>
+        <div class="project-desc-col">
+            {{ project.content }}
+            {% if project.link %}
+            <p class="project-url">{{ project.link.url }}</p>
+            {% elsif project.links %}
+            {% for lnk in project.links %}
+            <p class="project-url">{{ lnk.url }}</p>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+
+<!-- ===================== ABOUT ===================== -->
+<div class="page page-about">
+
+    <div class="about-header">
+        <span class="about-label">ABOUT</span>
+    </div>
+    <div class="about-rule"></div>
+
+    <div class="about-content">
+        <p>Grayson Earle is a contemporary artist and tactical media practitioner from the United States, based in Berlin. His work examines digital technologies and political agency through guerrilla projection, software, and simulation.</p>
+
+        <p>He is known for <em>Bail Bloc</em>, a program that mined cryptocurrency to post bail for low-income individuals in New York City, and for his membership in <em>The Illuminator</em>, a guerrilla projection collective. His film <em>Why Don't the Cops Fight Each Other?</em> dissects the source code governing police behavior in video games and has screened at SXSW, the Oberhausen Film Festival, and the Australian Centre for the Moving Image (ACMI). His recent project <em>Return to Sender</em> uses GPS trackers and hidden audio devices to trace Amazon's opaque logistics network.</p>
+
+        <p>His work has been presented at the Whitney Museum of American Art, KW Institute for Contemporary Art, and the Singapore Art Museum. He has held residencies at Akademie Schloss Solitude, Pioneer Works, and BPA// Berlin, and serves as a Jury Member for Digital Arts at Akademie Schloss Solitude, where he also serves as the long-term technical lead for the Web Residency program.</p>
+
+        <p>Earle has taught as a Visiting Assistant Professor at Oberlin College and a Substitute Assistant Professor at New York City College of Technology. He has also taught at Parsons School of Art and Design and die Angewandte (University of Applied Arts Vienna). He currently teaches <em>Hacking as Practice</em> at Hochschule fur Bildende Kunste Braunschweig. He is a scholarship recipient in Critical Philosophy at the New Centre for Research & Practice.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

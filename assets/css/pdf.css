@@ -1,0 +1,275 @@
+/* =====================
+   PDF Stylesheet — Grayson Earle Portfolio
+   ===================== */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+:root {
+    --ink: #111;
+    --mid: #555;
+    --muted: #888;
+    --rule: #ddd;
+    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "Courier New", Courier, monospace;
+}
+
+html, body {
+    font-family: var(--font);
+    font-size: 9.5pt;
+    line-height: 1.65;
+    color: var(--ink);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+em {
+    font-style: italic;
+}
+
+/* =====================
+   PAGE CONTAINER
+   ===================== */
+.page {
+    width: 210mm;
+    height: 297mm;
+    padding: 22mm 26mm;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+    -webkit-break-after: page;
+}
+
+.page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+    -webkit-break-after: auto;
+}
+
+/* =====================
+   COVER PAGE
+   ===================== */
+.page-cover {
+    justify-content: space-between;
+    padding-top: 28mm;
+    padding-bottom: 22mm;
+}
+
+.cover-body {
+    display: flex;
+    flex-direction: column;
+    gap: 7mm;
+}
+
+.cover-name {
+    font-size: 48pt;
+    font-weight: 200;
+    letter-spacing: 0.12em;
+    line-height: 0.95;
+    color: var(--ink);
+    text-transform: uppercase;
+}
+
+.cover-rule {
+    width: 100%;
+    height: 0.75pt;
+    background: var(--ink);
+}
+
+.cover-tagline {
+    font-size: 11pt;
+    font-weight: 300;
+    color: var(--mid);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+.cover-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+    font-family: var(--mono);
+    font-size: 8pt;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+}
+
+/* =====================
+   PROJECT PAGES
+   ===================== */
+.page-project {
+    padding-top: 20mm;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5mm;
+}
+
+.project-header-left {
+    display: flex;
+    align-items: baseline;
+    gap: 4mm;
+}
+
+.project-num {
+    font-family: var(--mono);
+    font-size: 7.5pt;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+}
+
+.project-title {
+    font-size: 15pt;
+    font-weight: 300;
+    letter-spacing: 0.09em;
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.project-year {
+    font-family: var(--mono);
+    font-size: 7.5pt;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.project-medium {
+    font-size: 8pt;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin-left: calc(4mm + 9mm); /* align with title: gap + num width */
+    margin-bottom: 4mm;
+}
+
+.project-rule {
+    width: 100%;
+    height: 0.5pt;
+    background: var(--rule);
+    margin-bottom: 5mm;
+}
+
+.project-hero {
+    width: 100%;
+    height: 60mm;
+    overflow: hidden;
+    margin-bottom: 5mm;
+    flex-shrink: 0;
+}
+
+.project-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.project-body {
+    display: grid;
+    grid-template-columns: 50mm 1fr;
+    gap: 8mm;
+    flex: 1;
+}
+
+.project-meta-col {
+    font-size: 7.5pt;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.project-meta-col p {
+    margin-bottom: 2.5mm;
+}
+
+.project-desc-col {
+    font-size: 9.5pt;
+    line-height: 1.75;
+    color: var(--ink);
+}
+
+.project-desc-col p {
+    margin-bottom: 3mm;
+}
+
+.project-url {
+    font-family: var(--mono);
+    font-size: 7.5pt;
+    color: var(--muted);
+    margin-top: 4mm !important;
+    margin-bottom: 0 !important;
+}
+
+/* =====================
+   ABOUT PAGE
+   ===================== */
+.page-about {
+    padding-top: 20mm;
+}
+
+.about-header {
+    margin-bottom: 2mm;
+}
+
+.about-label {
+    font-family: var(--mono);
+    font-size: 7.5pt;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+}
+
+.about-rule {
+    width: 100%;
+    height: 0.5pt;
+    background: var(--rule);
+    margin-bottom: 9mm;
+}
+
+.about-content {
+    max-width: 128mm;
+    display: flex;
+    flex-direction: column;
+    gap: 5.5mm;
+}
+
+.about-content p {
+    font-size: 9.5pt;
+    line-height: 1.8;
+    color: var(--ink);
+}
+
+/* =====================
+   Print context
+   ===================== */
+@media print {
+    html, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .page {
+        break-inside: avoid-column;
+    }
+}
