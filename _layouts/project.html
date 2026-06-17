@@ -14,7 +14,10 @@ layout: default
 {% if prev_index < 0 %}{% assign prev_index=projects.size | minus: 1 %}{% endif %} {% assign
     next_project=projects[next_index] %} <main class="detail-main">
     <div class="detail-header">
-        <span class="detail-title">{{ page.title }}</span>
+        <div class="detail-title-group">
+            <a href="{{ '/' | relative_url }}" class="detail-back-link" aria-label="Back to index">&larr;</a>
+            <span class="detail-title">{{ page.title }}</span>
+        </div>
         <span class="detail-year">{{ page.year }}</span>
     </div>
     <div class="detail-hero">

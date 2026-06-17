@@ -256,6 +256,24 @@ a {
     padding: 1.4rem 2rem;
 }
 
+.detail-title-group {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.detail-back-link {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #b7b7b7;
+    text-decoration: none;
+    transition: color 0.12s ease;
+}
+
+.detail-back-link:hover {
+    color: var(--muted);
+}
+
 .detail-title {
     font-size: 1rem;
     font-weight: normal;
