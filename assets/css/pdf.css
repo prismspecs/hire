@@ -1,5 +1,8 @@
 /* =====================
    PDF Stylesheet — Grayson Earle Portfolio
+   Landscape A4 — impeccable design principles applied
+   Fonts: Alumni Sans (display) + Albert Sans (body)
+   No numbered markers, no tracked-uppercase scaffolding
    ===================== */
 
 *, *::before, *::after {
@@ -9,255 +12,293 @@
 }
 
 @page {
-    size: A4 portrait;
+    size: A4 landscape;
     margin: 0;
 }
 
 :root {
-    --ink: #111;
-    --mid: #555;
-    --muted: #888;
-    --rule: #ddd;
-    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --mono: "Courier New", Courier, monospace;
+    --ink:     oklch(10% 0 0);
+    --mid:     oklch(40% 0 0);
+    --quiet:   oklch(62% 0 0);
+    --border:  oklch(82% 0 0);
+    --bg:      oklch(100% 0 0);
+    --cover-bg: oklch(10% 0 0);
+
+    --display: 'Alumni Sans', Helvetica, sans-serif;
+    --body:    'Albert Sans', Helvetica, sans-serif;
 }
 
 html, body {
-    font-family: var(--font);
-    font-size: 9.5pt;
+    font-family: var(--body);
+    font-size: 9pt;
     line-height: 1.65;
     color: var(--ink);
-    background: #fff;
+    background: var(--bg);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+em { font-style: italic; }
 
-em {
-    font-style: italic;
-}
+p { margin: 0; }
 
 /* =====================
-   PAGE CONTAINER
+   PAGE — A4 Landscape = 297mm × 210mm
    ===================== */
 .page {
-    width: 210mm;
-    height: 297mm;
-    padding: 22mm 26mm;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    width: 297mm;
+    height: 210mm;
+    background: var(--bg);
     overflow: hidden;
+    position: relative;
     break-after: page;
     page-break-after: always;
-    -webkit-break-after: page;
 }
 
 .page:last-child {
     break-after: auto;
     page-break-after: auto;
-    -webkit-break-after: auto;
 }
 
 /* =====================
-   COVER PAGE
+   COVER
    ===================== */
 .page-cover {
-    justify-content: space-between;
-    padding-top: 28mm;
-    padding-bottom: 22mm;
+    background: var(--cover-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22mm 24mm;
+    gap: 6mm;
 }
 
-.cover-body {
+.cover-inner {
     display: flex;
     flex-direction: column;
     gap: 7mm;
 }
 
 .cover-name {
-    font-size: 48pt;
-    font-weight: 200;
-    letter-spacing: 0.12em;
-    line-height: 0.95;
-    color: var(--ink);
+    font-family: var(--display);
+    font-size: 116pt;
+    font-weight: 700;
+    line-height: 0.87;
+    letter-spacing: -0.025em;
+    color: oklch(100% 0 0);
     text-transform: uppercase;
 }
 
 .cover-rule {
     width: 100%;
-    height: 0.75pt;
-    background: var(--ink);
+    height: 0.5pt;
+    background: oklch(30% 0 0);
+}
+
+.cover-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .cover-tagline {
-    font-size: 11pt;
+    font-family: var(--body);
+    font-size: 10.5pt;
     font-weight: 300;
-    color: var(--mid);
-    letter-spacing: 0.04em;
-    line-height: 1.6;
+    color: oklch(68% 0 0);
+    letter-spacing: 0.01em;
+}
+
+.cover-location {
+    font-family: var(--body);
+    font-size: 8.5pt;
+    font-weight: 300;
+    color: oklch(45% 0 0);
 }
 
 .cover-contact {
     display: flex;
-    flex-direction: column;
-    gap: 1.5mm;
-    font-family: var(--mono);
-    font-size: 8pt;
-    color: var(--muted);
-    letter-spacing: 0.04em;
+    gap: 12mm;
+    font-family: var(--body);
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: oklch(45% 0 0);
+    letter-spacing: 0.02em;
 }
 
 /* =====================
    PROJECT PAGES
+   Image bleeds the full left side; text occupies the right.
    ===================== */
 .page-project {
-    padding-top: 20mm;
+    display: grid;
+    grid-template-columns: 42% 1fr;
+}
+
+.project-image {
+    overflow: hidden;
+    background: oklch(90% 0 0);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+.project-image--none {
+    background: oklch(14% 0 0);
+}
+
+.project-text {
+    padding: 14mm 18mm 14mm 14mm;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .project-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 1.5mm;
-}
-
-.project-header-left {
-    display: flex;
-    align-items: baseline;
-    gap: 4mm;
-}
-
-.project-num {
-    font-family: var(--mono);
-    font-size: 7.5pt;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    flex-shrink: 0;
+    gap: 6mm;
+    margin-bottom: 2mm;
 }
 
 .project-title {
-    font-size: 15pt;
-    font-weight: 300;
-    letter-spacing: 0.09em;
-    line-height: 1.1;
+    font-family: var(--display);
+    font-size: 22pt;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
     color: var(--ink);
+    flex: 1;
 }
 
 .project-year {
-    font-family: var(--mono);
-    font-size: 7.5pt;
-    color: var(--muted);
-    letter-spacing: 0.06em;
+    font-family: var(--body);
+    font-size: 8pt;
+    font-weight: 300;
+    color: var(--quiet);
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .project-medium {
+    font-family: var(--body);
     font-size: 8pt;
-    color: var(--muted);
-    letter-spacing: 0.04em;
-    margin-left: calc(4mm + 9mm); /* align with title: gap + num width */
+    font-weight: 300;
+    color: var(--quiet);
     margin-bottom: 4mm;
 }
 
 .project-rule {
     width: 100%;
     height: 0.5pt;
-    background: var(--rule);
-    margin-bottom: 5mm;
-}
-
-.project-hero {
-    width: 100%;
-    height: 60mm;
-    overflow: hidden;
+    background: var(--border);
     margin-bottom: 5mm;
     flex-shrink: 0;
 }
 
-.project-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-}
-
 .project-body {
     display: grid;
-    grid-template-columns: 50mm 1fr;
-    gap: 8mm;
+    grid-template-columns: 42mm 1fr;
+    gap: 7mm;
     flex: 1;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .project-meta-col {
     font-size: 7.5pt;
-    color: var(--muted);
+    font-weight: 300;
+    color: var(--quiet);
     line-height: 1.7;
+    overflow: hidden;
 }
 
 .project-meta-col p {
-    margin-bottom: 2.5mm;
-}
-
-.project-desc-col {
-    font-size: 9.5pt;
-    line-height: 1.75;
-    color: var(--ink);
-}
-
-.project-desc-col p {
     margin-bottom: 3mm;
 }
 
 .project-url {
-    font-family: var(--mono);
-    font-size: 7.5pt;
-    color: var(--muted);
-    margin-top: 4mm !important;
+    font-size: 7pt !important;
+    color: var(--quiet) !important;
+    margin-top: 2mm !important;
     margin-bottom: 0 !important;
+    word-break: break-all;
+}
+
+.project-desc-col {
+    font-size: 9pt;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--ink);
+    overflow: hidden;
+    max-width: 65ch;
+}
+
+.project-desc-col p {
+    margin-bottom: 3.5mm;
+}
+
+.project-desc-col p:last-child {
+    margin-bottom: 0;
 }
 
 /* =====================
    ABOUT PAGE
+   Two columns, typographic treatment.
    ===================== */
 .page-about {
-    padding-top: 20mm;
+    padding: 16mm 20mm 18mm 20mm;
+    display: flex;
+    flex-direction: column;
 }
 
-.about-header {
-    margin-bottom: 2mm;
-}
-
-.about-label {
-    font-family: var(--mono);
-    font-size: 7.5pt;
-    color: var(--muted);
-    letter-spacing: 0.1em;
+.about-name {
+    font-family: var(--display);
+    font-size: 44pt;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    color: var(--ink);
+    margin-bottom: 6mm;
 }
 
 .about-rule {
     width: 100%;
     height: 0.5pt;
-    background: var(--rule);
-    margin-bottom: 9mm;
+    background: var(--border);
+    margin-bottom: 8mm;
 }
 
-.about-content {
-    max-width: 128mm;
+.about-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14mm;
+    flex: 1;
+}
+
+.about-col {
     display: flex;
     flex-direction: column;
-    gap: 5.5mm;
+    gap: 4mm;
+    overflow: hidden;
 }
 
-.about-content p {
-    font-size: 9.5pt;
+.about-col p {
+    font-size: 9pt;
+    font-weight: 300;
     line-height: 1.8;
     color: var(--ink);
+}
+
+.about-contact {
+    font-size: 7.5pt !important;
+    color: var(--quiet) !important;
+    margin-top: 6mm !important;
 }
 
 /* =====================
@@ -267,9 +308,5 @@ em {
     html, body {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-    }
-
-    .page {
-        break-inside: avoid-column;
     }
 }
