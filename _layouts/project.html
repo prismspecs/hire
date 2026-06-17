@@ -39,14 +39,22 @@ layout: default
         </div>
         <div class="detail-desc">
             {{ content }}
-            {% if page.link %}
-            <a href="{{ page.link.url }}" target="_blank" class="project-link">{{ page.link.text }}</a>
+            {% if page.link or page.links %}
+            <div class="project-links">
+                {% if page.link %}
+                <a href="{{ page.link.url }}" target="_blank" class="project-link">{{ page.link.text }}</a>
+                {% endif %}
+                {% for item in page.links %}
+                <a href="{{ item.url }}" target="_blank" class="project-link">{{ item.text }}</a>
+                {% endfor %}
+            </div>
             {% endif %}
         </div>
     </div>
     {% if page.images %}
     <div class="detail-images">
         {% for img in page.images %}
+        {% unless img.src == page.hero_image or img.src == page.hero_video %}
         <div class="image-container">
             {% if img.vimeo_id %}
             <div style="padding:56.25% 0 0 0;position:relative;margin-bottom:0.4rem;">
@@ -65,6 +73,7 @@ layout: default
             <p class="image-caption">{{ img.caption }}</p>
             {% endif %}
         </div>
+        {% endunless %}
         {% endfor %}
     </div>
     {% endif %}
