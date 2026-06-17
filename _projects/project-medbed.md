@@ -22,6 +22,9 @@ link:
 images:
   - src: assets/images/medbed/installation-view-side.jpg
   - src: assets/images/medbed/installation-view-detail.jpg
+  - src: assets/images/medbed/med-bed-in-action.mp4
+    alt: "MedBed in action."
+    caption: "MedBed in action, with three industrial motors controlled via OSC signals synced to the video timeline, alongside independent LED animations."
 ---
 
 MedBed is an interactive sculpture inspired by the conspiracy myth of a medical device that can heal all illnesses and extend life. The QAnon movement claims such devices are kept by elite deep state members. In Johannes Büttner's sculptural paraphrase, the bed becomes a dark, sardonic form—programmed to move in sync with scenes from the accompanying film, hinting at the deception of conspiracy propagandists.

@@ -18,7 +18,15 @@ layout: default
         <span class="detail-year">{{ page.year }}</span>
     </div>
     <div class="detail-hero">
+        {% if page.hero_video %}
+        <video controls muted loop playsinline preload="metadata" poster="{{ page.hero_image | relative_url }}">
+            <source src="{{ page.hero_video | replace: '.mp4', '.webm' | relative_url }}" type="video/webm">
+            <source src="{{ page.hero_video | relative_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        {% else %}
         <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt | default: page.title }}">
+        {% endif %}
     </div>
     <div class="detail-body">
         <div class="detail-meta">
