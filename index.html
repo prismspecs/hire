@@ -9,6 +9,7 @@ layout: default
             <img src="{{ project.thumb | relative_url }}" alt="{{ project.title }}" class="thumb-slide active">
             {% if project.images %}
             {% for img in project.images %}
+            {% unless img.src == project.thumb %}
             {% if img.vimeo_id %}
             <img src="{{ '/assets/images/project-interactive-installation/vimeo-' | append: img.vimeo_id | append: '.jpg' | relative_url }}" alt="{{ img.caption | default: project.title }}" class="thumb-slide" loading="lazy">
             {% elsif img.src contains '.mp4' %}
@@ -19,6 +20,7 @@ layout: default
             {% else %}
             <img src="{{ img.src | relative_url }}" alt="{{ img.alt | default: project.title }}" class="thumb-slide" loading="lazy">
             {% endif %}
+            {% endunless %}
             {% endfor %}
             <div class="slide-zone slide-zone-prev"></div>
             <div class="slide-zone slide-zone-next"></div>
