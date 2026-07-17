@@ -39,12 +39,6 @@ layout: default
         </div>
         <div class="detail-desc">
             {{ content }}
-            {% if page.testimonial %}
-            <blockquote class="testimonial">
-                <p>&ldquo;{{ page.testimonial.quote }}&rdquo;</p>
-                <cite>&mdash; {{ page.testimonial.name }}{% if page.testimonial.role %}, {{ page.testimonial.role }}{% endif %}</cite>
-            </blockquote>
-            {% endif %}
             {% if page.link or page.links %}
             <div class="project-links">
                 {% if page.link %}

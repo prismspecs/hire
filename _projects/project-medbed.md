@@ -19,11 +19,6 @@ meta:
 link:
   url: https://www.instagram.com/p/C1owOw2IFxv/?img_index=8
   text: View on Instagram
-# To display a client quote on this page, uncomment and fill in:
-# testimonial:
-#   quote: "Working with Grayson was..."
-#   name: "Johannes Büttner"
-#   role: "Artist"
 images:
   - src: assets/images/medbed/installation-view-side.jpg
   - src: assets/images/medbed/installation-view-detail.jpg

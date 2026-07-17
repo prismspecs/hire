@@ -377,24 +377,6 @@ a {
     color: var(--muted);
 }
 
-.testimonial {
-    border-left: 2px solid var(--border);
-    padding-left: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.testimonial p {
-    font-style: italic;
-}
-
-.testimonial cite {
-    font-size: 0.9rem;
-    font-style: normal;
-    color: var(--muted);
-}
-
 .detail-images {
     padding: 0 2rem 2rem;
 }
