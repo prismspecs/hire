@@ -3,7 +3,7 @@ title: "kSync"
 slug: project-ksync
 order: 4
 year: "2024–2025"
-short_desc: "An open-source platform that keeps walls of displays frame-locked on affordable Raspberry Pi hardware — with sub-10ms accuracy, show control, and 24/7 exhibition reliability."
+short_desc: "An open-source platform that keeps walls of displays frame-locked on affordable Raspberry Pi hardware, with sub-10ms accuracy, show control, and 24/7 exhibition reliability."
 medium: "Distributed Media Synchronization<br>and Show Control"
 icon: "▷"
 thumb: assets/images/ksync/installation-view1.jpg
@@ -31,8 +31,8 @@ images:
     caption: "Vertical display synchronization in a gallery environment."
 ---
 
-Galleries that want a wall of screens playing in perfect sync usually face an ugly choice: proprietary media servers that cost more than the artwork, or fragile DIY scripts that drift out of alignment mid-exhibition. kSync is my answer to that problem — an open-source media synchronization and automation platform running on a custom Embedded Linux distribution for Raspberry Pi hardware, built for artists and institutions that need frame-accurate playback without the enterprise price tag.
+Galleries that want a wall of screens playing in perfect sync usually face an ugly choice: proprietary media servers that cost more than the artwork, or fragile DIY scripts that drift out of alignment mid-exhibition. kSync is my answer to that problem: an open-source media synchronization and automation platform running on a custom Embedded Linux distribution for Raspberry Pi hardware, built for artists and institutions that need frame-accurate playback without the enterprise price tag.
 
 The software engine uses GStreamer for video processing and implements a multi-tier synchronization strategy. A central Leader node broadcasts UDP sync packets while Collaborator nodes calculate temporal deviation using an exponentially weighted moving average filter to compensate for network latency. Minor offsets are corrected by a proportional controller that gently adjusts playback rate; larger deviations trigger accurate flushing seeks. The result is sub-10ms alignment with no visible stutter.
 
-Beyond video, kSync conducts entire physical environments from a single protocol-agnostic timeline: DMX lighting, MIDI audio, serial motor control, and WebSocket messaging, all scheduled against the media clock. Deployment is deliberately gallery-proof — provisioning a node means inserting a USB drive with the media and a config file, so no specialized IT staff is needed on site. The system has run 24/7 in public Berlin exhibitions, in one case synchronizing 11 displays while coordinating kinetic sculpture rotations over serial motor control.
+Beyond video, kSync conducts entire physical environments from a single protocol-agnostic timeline: DMX lighting, MIDI audio, serial motor control, and WebSocket messaging, all scheduled against the media clock. Deployment is deliberately gallery-proof: provisioning a node means inserting a USB drive with the media and a config file, so no specialized IT staff is needed on site. The system has run 24/7 in public Berlin exhibitions, in one case synchronizing 11 displays while coordinating kinetic sculpture rotations over serial motor control.

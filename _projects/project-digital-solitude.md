@@ -60,7 +60,7 @@ images:
     caption: "Game-Changers: The Game interface detail."
 ---
 
-Since 2025 I have been the long-term technical lead for Akademie Schloss Solitude's Web Residencies program — an ongoing retainer engagement covering server infrastructure, digital archiving, and hands-on support for resident artists through group sessions, one-on-one meetings, and creative coding workshops. Digital Solitude's residency cycle is a good example of that work because it brought together projects with very different technical needs, interfaces, and preservation requirements.
+Since 2025 I have been the long-term technical lead for Akademie Schloss Solitude's Web Residencies program, an ongoing retainer engagement covering server infrastructure, digital archiving, and hands-on support for resident artists through group sessions, one-on-one meetings, and creative coding workshops. Digital Solitude's residency cycle is a good example of that work because it brought together projects with very different technical needs, interfaces, and preservation requirements.
 
 Akademie Schloss Solitude is a public law foundation in Stuttgart that has supported more than 1,700 artists and researchers from over 120 countries since 1990. Its Web Residencies program commissions web-based works and publishes both process and outcome online. My role sits between operations and artistic production: maintaining hosting and archives, consulting on technical decisions, and helping residents move from concept to working public interface without flattening the specific logic of each project.
 
