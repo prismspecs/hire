@@ -32,4 +32,6 @@ images:
   - src: assets/images/automated-ground-station/satelite4.jpg
 ---
 
-The open-weather Automatic Ground Station (AGS) is an open-source Raspberry Pi-based radio receiver that automatically captures satellite imagery from NOAA weather satellites. Developed as a collaboration with the open-weather collective, the AGS democratizes access to real-time satellite weather imagery by providing an affordable, easy-to-build ground station that operates autonomously.
+Receiving imagery directly from a weather satellite normally requires radio expertise, constant attention, and expensive equipment. The open-weather Automatic Ground Station (AGS) removes all three barriers: it is an open-source, Raspberry Pi-based radio receiver that captures imagery from NOAA weather satellites entirely on its own. Developed in collaboration with the open-weather collective, the AGS democratizes access to real-time satellite imagery through an affordable, easy-to-build station that operates autonomously.
+
+As hardware designer and lead developer, I was responsible for making a sensitive radio instrument buildable and maintainable by non-engineers — community groups assemble and run these stations themselves. More than a dozen stations are now deployed or underway across five continents, from Florida and Pune to Vienna, Cornwall, Phnom Penh, and Valparaíso, with the project supported by the Open Science Hardware Foundation, the Alfred P. Sloan Foundation, and the UK's Arts and Humanities Research Council.

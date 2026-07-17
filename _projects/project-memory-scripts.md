@@ -15,8 +15,8 @@ meta:
   - "Role: Projection Designer & Technical Consultant"
   - "Context: 25th Anniversary of the Windhoek-Berlin City Partnership"
   - "Artist: Vitjitua Ndjiharine"
-  - "Technical Coordination: Thomas (PAM), Erik"
-  - "Project Management: Larah (Kulturprojekte Berlin)"
+  - "Technical coordination: PAM"
+  - "Project management: Kulturprojekte Berlin"
 images:
   - src: assets/images/memory-scripts/wide-shot-lighting.jpg
     alt: "Wide shot of the Abgeordnetenhaus Berlin with projection and lighting."

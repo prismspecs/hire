@@ -29,4 +29,6 @@ images:
   - src: assets/images/bail-bloc/180511 Bail Bloc at Etheriel Summit HIGH RES-7.jpg
 ---
 
-Bail Bloc was a desktop application that bailed people out of jail by mining cryptocurrency. It operated as a distributed crypto mining operation, converting and donating 100% of proceeds to bail people out of pre-trial detention and pay bonds for immigrants detained by ICE. The project challenged the anti-human logic of the bail system while demonstrating how technology could be repurposed for social justice.
+From 2017 to 2023, thousands of people donated their computers' spare cycles to get strangers out of jail. Bail Bloc was a desktop application that quietly mined cryptocurrency in the background — using only 10–25% of a machine's power — and converted 100% of the proceeds into bail for people in pre-trial detention and bonds for immigrants detained by ICE. The project challenged the anti-human logic of the bail system while demonstrating how technology could be repurposed for social justice.
+
+I created the project with the Dark Inquiry collective and led its development: a cross-platform desktop app that had to be trustworthy enough for strangers to install, gentle enough to run unnoticed for years, and reliable enough to sustain a real-world fund. It was covered by The New Yorker, Wired, Vice, The Guardian, and Artforum, among others.

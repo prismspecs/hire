@@ -243,6 +243,45 @@ a {
 }
 
 /* =====================
+   INDEX — Clients strip & hire CTA
+   ===================== */
+.clients-strip {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--muted);
+    padding: 1.2rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.hire-cta {
+    display: block;
+    padding: 1.5rem 1.4rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.12s ease;
+}
+
+.hire-cta:hover {
+    background: #f7f7f5;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* =====================
+   Sidebar — availability
+   ===================== */
+.sidebar-availability {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+}
+
+/* =====================
    DETAIL PAGES
    ===================== */
 .detail-main {
@@ -335,6 +374,24 @@ a {
 }
 
 .project-link:hover {
+    color: var(--muted);
+}
+
+.testimonial {
+    border-left: 2px solid var(--border);
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial cite {
+    font-size: 0.9rem;
+    font-style: normal;
     color: var(--muted);
 }
 
@@ -436,6 +493,49 @@ a {
     color: var(--text);
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+/* =====================
+   SERVICES PAGE
+   ===================== */
+.services-heading {
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--muted);
+    margin: 2.4rem 0 1.2rem;
+}
+
+.services-list {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.services-list dt {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.services-list dd {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text);
+    margin: 0 0 1.4rem;
+}
+
+.services-contact {
+    margin-top: 2.4rem;
+}
+
+.services-contact-link {
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    color: var(--text);
+    text-underline-offset: 3px;
 }
 
 /* =====================

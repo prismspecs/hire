@@ -2,43 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grayson Earle — Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;600;700&family=Albert+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/assets/css/pdf.css' | relative_url }}">
 </head>
 <body>
 
-<!-- ===================== COVER ===================== -->
+<!-- COVER -->
 <div class="page page-cover">
-    <div class="cover-inner">
-        <div class="cover-name">GRAYSON<br>EARLE</div>
-        <div class="cover-rule"></div>
-        <div class="cover-sub">
-            <span class="cover-tagline">Creative Technologist &amp; Systems Architect</span>
-            <span class="cover-location">Berlin, {{ site.time | date: "%Y" }}</span>
+    <div class="cover-name">GRAYSON<br>EARLE</div>
+    <div class="cover-rule"></div>
+    <div class="cover-footer">
+        <span class="cover-tagline">Creative technology for artworks, exhibitions &amp; live performance — Berlin</span>
+        <div class="cover-contact">
+            <span>studio@graysonearle.com</span>
+            <span>hire.graysonearle.com</span>
         </div>
-    </div>
-    <div class="cover-contact">
-        <span>studio@graysonearle.com</span>
-        <span>hire.graysonearle.com</span>
     </div>
 </div>
 
-<!-- ===================== PROJECTS ===================== -->
+<!-- SERVICES -->
+<div class="page page-about">
+    <div class="about-name">Services</div>
+    <div class="about-rule"></div>
+    <div class="services-grid">
+        <div class="svc">
+            <h3>Projection Mapping</h3>
+            <p>Concept through opening night: site surveys, projector and lens spec, media servers, DMX lighting
+                integration, and custom mapping software when off-the-shelf tools fall short.</p>
+        </div>
+        <div class="svc">
+            <h3>Interactive Installations</h3>
+            <p>Computer vision, motion tracking, and sensor-driven experiences in Unity, openFrameworks, and
+                fully custom stacks — from festival-scale LED walls to AI-directed live performance.</p>
+        </div>
+        <div class="svc">
+            <h3>Custom Electronics &amp; Kinetics</h3>
+            <p>Arduino and embedded systems, motor and stepper control, LED systems, sensors, and show control
+                across DMX, Art-Net, OSC, and MIDI.</p>
+        </div>
+        <div class="svc">
+            <h3>Media Systems &amp; Multi-Screen Sync</h3>
+            <p>Synchronized video across many displays on affordable hardware, with sub-10ms accuracy —
+                field-proven in 24/7 public exhibitions.</p>
+        </div>
+        <div class="svc">
+            <h3>Web, Servers &amp; Preservation</h3>
+            <p>Websites and infrastructure for artists and institutions: hosting, archiving, and keeping
+                net-based artworks alive long after launch.</p>
+        </div>
+        <div class="svc">
+            <h3>Emergency Show Support</h3>
+            <p>Diagnosis and repair of misbehaving installations — video sync, projection, electronics, software
+                — on short notice, on site or remotely.</p>
+        </div>
+    </div>
+    <p class="services-footer">Engagements: day-rate consulting &middot; fixed-bid builds &middot; ongoing
+        retainers &nbsp;&nbsp;&nbsp; Based in Berlin, travels for installs &nbsp;&nbsp;&nbsp;
+        studio@graysonearle.com</p>
+</div>
+
+<!-- PROJECTS -->
 {% assign projects = site.projects | sort: "order" %}
 {% for project in projects %}
 <div class="page page-project">
 
-    {% if project.hero_image %}
-    <div class="project-image">
+    <div class="project-image{% unless project.hero_image %} project-image--none{% endunless %}">
+        {% if project.hero_image %}
         <img src="{{ project.hero_image | relative_url }}" alt="{{ project.title }}">
+        {% endif %}
     </div>
-    {% else %}
-    <div class="project-image project-image--none"></div>
-    {% endif %}
 
     <div class="project-text">
         <div class="project-header">
@@ -70,13 +102,13 @@
 </div>
 {% endfor %}
 
-<!-- ===================== ABOUT ===================== -->
+<!-- ABOUT -->
 <div class="page page-about">
-    <div class="about-name">GRAYSON EARLE</div>
+    <div class="about-name">Grayson Earle</div>
     <div class="about-rule"></div>
     <div class="about-cols">
         <div class="about-col">
-            <p>Grayson Earle is a contemporary artist and tactical media practitioner from the United States, based in Berlin. His work examines digital technologies and political agency through guerrilla projection, software, and simulation.</p>
+            <p>Grayson Earle is an artist and technologist based in Berlin, with more than a decade spent on both sides of the table: making his own work, and building the technology behind other people's. Clients get an engineer who can read a sketch or a half-formed idea and understand what the work actually needs — and an artist who knows that opening night doesn't move.</p>
             <p>He is known for <em>Bail Bloc</em>, a program that mined cryptocurrency to post bail for low-income individuals in New York City, and for his membership in <em>The Illuminator</em>, a guerrilla projection collective. His film <em>Why Don't the Cops Fight Each Other?</em> dissects the source code governing police behavior in video games and has screened at SXSW, the Oberhausen Film Festival, and the Australian Centre for the Moving Image (ACMI). His recent project <em>Return to Sender</em> uses GPS trackers and hidden audio devices to trace Amazon's opaque logistics network.</p>
         </div>
         <div class="about-col">

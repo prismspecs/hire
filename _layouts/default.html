@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
-    <meta name="description" content="Selected Works in digital fabrication, creative coding, and physical computing">
+    <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — Creative Technologist for Hire{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.short_desc %}{{ page.short_desc }}{% else %}Grayson Earle is a Berlin-based creative technologist for hire: projection mapping, interactive installations, custom electronics, and real-time software for artists, museums, festivals, and studios.{% endif %}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
 </head>

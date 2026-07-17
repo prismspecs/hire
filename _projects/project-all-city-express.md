@@ -1,6 +1,6 @@
 ---
 title: "All City Express (A.C.E.)"
-slug: project-project-interactive-installation
+slug: all-city-express
 order: 6
 year: "2019"
 short_desc: "An interactive art installation at the Panorama music festival in New York City paying homage to graffiti art's NYC roots."

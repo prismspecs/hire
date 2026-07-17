@@ -1,8 +1,8 @@
 /* =====================
    PDF Stylesheet — Grayson Earle Portfolio
-   Landscape A4 — impeccable design principles applied
-   Fonts: Alumni Sans (display) + Albert Sans (body)
-   No numbered markers, no tracked-uppercase scaffolding
+   Landscape A4 · Barlow Condensed (display) + Barlow (body)
+   Fonts served locally — guaranteed load in headless Chrome
+   Layout: full-width image strip top, text section below
    ===================== */
 
 *, *::before, *::after {
@@ -16,16 +16,46 @@
     margin: 0;
 }
 
+/* ── Local font faces ───────────────────────────────── */
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/assets/fonts/barlow-300.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/barlow-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/assets/fonts/barlow-condensed-600.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/assets/fonts/barlow-condensed-700.woff2') format('woff2');
+}
+
 :root {
     --ink:     oklch(10% 0 0);
-    --mid:     oklch(40% 0 0);
-    --quiet:   oklch(62% 0 0);
-    --border:  oklch(82% 0 0);
+    --mid:     oklch(38% 0 0);
+    --quiet:   oklch(58% 0 0);
+    --border:  oklch(80% 0 0);
     --bg:      oklch(100% 0 0);
     --cover-bg: oklch(10% 0 0);
 
-    --display: 'Alumni Sans', Helvetica, sans-serif;
-    --body:    'Albert Sans', Helvetica, sans-serif;
+    --display: 'Barlow Condensed', Helvetica, sans-serif;
+    --body:    'Barlow', Helvetica, sans-serif;
 }
 
 html, body {
@@ -33,68 +63,58 @@ html, body {
     font-size: 9pt;
     line-height: 1.65;
     color: var(--ink);
-    background: var(--bg);
+    background: #fff;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
 
 em { font-style: italic; }
+p  { margin: 0; }
 
-p { margin: 0; }
-
-/* =====================
-   PAGE — A4 Landscape = 297mm × 210mm
-   ===================== */
+/* ── A4 Landscape = 297 × 210 mm ───────────────────── */
 .page {
     width: 297mm;
     height: 210mm;
-    background: var(--bg);
+    background: #fff;
     overflow: hidden;
     position: relative;
     break-after: page;
     page-break-after: always;
 }
-
 .page:last-child {
     break-after: auto;
     page-break-after: auto;
 }
 
-/* =====================
-   COVER
-   ===================== */
+/* ── COVER ──────────────────────────────────────────── */
 .page-cover {
     background: var(--cover-bg);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 22mm 24mm;
-    gap: 6mm;
-}
-
-.cover-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 7mm;
+    padding: 18mm 22mm 20mm;
 }
 
 .cover-name {
     font-family: var(--display);
-    font-size: 116pt;
     font-weight: 700;
-    line-height: 0.87;
-    letter-spacing: -0.025em;
-    color: oklch(100% 0 0);
+    font-size: 108pt;
+    line-height: 0.90;
+    letter-spacing: 0.01em;
+    color: #fff;
     text-transform: uppercase;
+    font-kerning: normal;
+    margin-bottom: 7mm;
 }
 
 .cover-rule {
     width: 100%;
     height: 0.5pt;
-    background: oklch(30% 0 0);
+    background: oklch(28% 0 0);
+    margin-bottom: 5mm;
 }
 
-.cover-sub {
+.cover-footer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -102,48 +122,42 @@ p { margin: 0; }
 
 .cover-tagline {
     font-family: var(--body);
-    font-size: 10.5pt;
     font-weight: 300;
-    color: oklch(68% 0 0);
-    letter-spacing: 0.01em;
-}
-
-.cover-location {
-    font-family: var(--body);
-    font-size: 8.5pt;
-    font-weight: 300;
-    color: oklch(45% 0 0);
+    font-size: 11pt;
+    color: oklch(65% 0 0);
+    letter-spacing: 0.02em;
 }
 
 .cover-contact {
     display: flex;
-    gap: 12mm;
+    gap: 10mm;
     font-family: var(--body);
-    font-size: 7.5pt;
     font-weight: 300;
+    font-size: 8pt;
     color: oklch(45% 0 0);
     letter-spacing: 0.02em;
 }
 
-/* =====================
-   PROJECT PAGES
-   Image bleeds the full left side; text occupies the right.
-   ===================== */
+/* ── PROJECT PAGES ──────────────────────────────────── */
+/* Top ~52% = image; bottom ~48% = text */
 .page-project {
-    display: grid;
-    grid-template-columns: 42% 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-image {
+    width: 100%;
+    height: 107mm;    /* ~51% of 210mm */
     overflow: hidden;
-    background: oklch(90% 0 0);
+    flex-shrink: 0;
+    background: oklch(88% 0 0);
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center 30%;
     display: block;
 }
 
@@ -152,144 +166,150 @@ p { margin: 0; }
 }
 
 .project-text {
-    padding: 14mm 18mm 14mm 14mm;
+    flex: 1;
+    padding: 7mm 14mm 8mm;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border-top: 0.5pt solid var(--border);
 }
 
+/* Title row */
 .project-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 6mm;
-    margin-bottom: 2mm;
+    margin-bottom: 1.5mm;
 }
 
 .project-title {
     font-family: var(--display);
-    font-size: 22pt;
-    font-weight: 600;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    font-size: 19pt;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-kerning: normal;
     color: var(--ink);
     flex: 1;
 }
 
 .project-year {
     font-family: var(--body);
-    font-size: 8pt;
     font-weight: 300;
+    font-size: 8pt;
     color: var(--quiet);
     white-space: nowrap;
     flex-shrink: 0;
+    margin-left: 8mm;
 }
 
 .project-medium {
     font-family: var(--body);
-    font-size: 8pt;
     font-weight: 300;
+    font-size: 7.5pt;
     color: var(--quiet);
-    margin-bottom: 4mm;
+    letter-spacing: 0.01em;
+    margin-bottom: 3.5mm;
 }
 
 .project-rule {
     width: 100%;
     height: 0.5pt;
     background: var(--border);
-    margin-bottom: 5mm;
+    margin-bottom: 4mm;
     flex-shrink: 0;
 }
 
+/* Two-column text body */
 .project-body {
     display: grid;
-    grid-template-columns: 42mm 1fr;
-    gap: 7mm;
+    grid-template-columns: 56mm 1fr;
+    gap: 8mm;
     flex: 1;
     overflow: hidden;
     min-height: 0;
 }
 
 .project-meta-col {
-    font-size: 7.5pt;
+    font-family: var(--body);
+    font-size: 7pt;
     font-weight: 300;
     color: var(--quiet);
-    line-height: 1.7;
+    line-height: 1.65;
     overflow: hidden;
 }
 
 .project-meta-col p {
-    margin-bottom: 3mm;
+    margin-bottom: 2mm;
 }
 
 .project-url {
-    font-size: 7pt !important;
-    color: var(--quiet) !important;
-    margin-top: 2mm !important;
+    font-size: 6.5pt !important;
+    color: oklch(68% 0 0) !important;
+    margin-top: 2.5mm !important;
     margin-bottom: 0 !important;
     word-break: break-all;
 }
 
 .project-desc-col {
-    font-size: 9pt;
+    font-family: var(--body);
+    font-size: 8.5pt;
     font-weight: 300;
     line-height: 1.75;
     color: var(--ink);
     overflow: hidden;
-    max-width: 65ch;
 }
 
 .project-desc-col p {
-    margin-bottom: 3.5mm;
+    margin-bottom: 3mm;
 }
-
 .project-desc-col p:last-child {
     margin-bottom: 0;
 }
 
-/* =====================
-   ABOUT PAGE
-   Two columns, typographic treatment.
-   ===================== */
+/* ── ABOUT PAGE ─────────────────────────────────────── */
 .page-about {
-    padding: 16mm 20mm 18mm 20mm;
     display: flex;
     flex-direction: column;
+    padding: 14mm 16mm 16mm;
 }
 
 .about-name {
     font-family: var(--display);
-    font-size: 44pt;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 0.95;
+    font-weight: 700;
+    font-size: 40pt;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    font-kerning: normal;
     color: var(--ink);
-    margin-bottom: 6mm;
+    text-transform: uppercase;
+    margin-bottom: 5mm;
 }
 
 .about-rule {
     width: 100%;
     height: 0.5pt;
     background: var(--border);
-    margin-bottom: 8mm;
+    margin-bottom: 7mm;
 }
 
 .about-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 14mm;
+    gap: 12mm;
     flex: 1;
 }
 
 .about-col {
     display: flex;
     flex-direction: column;
-    gap: 4mm;
+    gap: 3.5mm;
     overflow: hidden;
 }
 
 .about-col p {
-    font-size: 9pt;
+    font-family: var(--body);
+    font-size: 8.5pt;
     font-weight: 300;
     line-height: 1.8;
     color: var(--ink);
@@ -298,12 +318,50 @@ p { margin: 0; }
 .about-contact {
     font-size: 7.5pt !important;
     color: var(--quiet) !important;
-    margin-top: 6mm !important;
+    letter-spacing: 0.02em;
+    margin-top: auto !important;
+    padding-top: 5mm;
 }
 
-/* =====================
-   Print context
-   ===================== */
+/* ── SERVICES PAGE ──────────────────────────────────── */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8mm 12mm;
+    flex: 1;
+    align-content: start;
+}
+
+.svc h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 12pt;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 1.5mm;
+}
+
+.svc p {
+    font-family: var(--body);
+    font-size: 8.5pt;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--mid);
+}
+
+.services-footer {
+    font-family: var(--body);
+    font-size: 7.5pt;
+    font-weight: 300;
+    color: var(--quiet);
+    letter-spacing: 0.02em;
+    margin-top: auto;
+    padding-top: 5mm;
+    border-top: 0.5pt solid var(--border);
+}
+
+/* ── Print ──────────────────────────────────────────── */
 @media print {
     html, body {
         -webkit-print-color-adjust: exact;

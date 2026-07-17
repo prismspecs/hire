@@ -3,7 +3,7 @@ title: "MedBed"
 slug: project-medbed
 order: 5
 year: "2024"
-short_desc: "MedBed is an interactive sculpture inspired by the conspiracy myth of a medical device that can heal all illnesses and extend life."
+short_desc: "Engineering for Johannes Büttner's kinetic sculpture at KW Institute: industrial motors, LEDs, and multichannel audio choreographed in sync with film."
 medium: "Custom Software<br>and Hardware"
 icon: "✚"
 thumb: assets/images/medbed/installation-view-front.jpg
@@ -19,6 +19,11 @@ meta:
 link:
   url: https://www.instagram.com/p/C1owOw2IFxv/?img_index=8
   text: View on Instagram
+# To display a client quote on this page, uncomment and fill in:
+# testimonial:
+#   quote: "Working with Grayson was..."
+#   name: "Johannes Büttner"
+#   role: "Artist"
 images:
   - src: assets/images/medbed/installation-view-side.jpg
   - src: assets/images/medbed/installation-view-detail.jpg
@@ -27,4 +32,8 @@ images:
     caption: "MedBed in action, with three industrial motors controlled via OSC signals synced to the video timeline, alongside independent LED animations."
 ---
 
-MedBed is an interactive sculpture inspired by the conspiracy myth of a medical device that can heal all illnesses and extend life. The QAnon movement claims such devices are kept by elite deep state members. In Johannes Büttner's sculptural paraphrase, the bed becomes a dark, sardonic form—programmed to move in sync with scenes from the accompanying film, hinting at the deception of conspiracy propagandists.
+When artist Johannes Büttner was preparing his exhibition *Amid the Alien Corn* at KW Institute for Contemporary Art, he needed a sculpture that could perform: a bed that tilts, opens its doors, and scans its occupant in choreographed sync with a film. He brought me on as software engineer and technical developer to make that happen on an institutional deadline — and to make it robust enough to run for the length of a museum exhibition.
+
+MedBed is inspired by the conspiracy myth of a medical device that can heal all illnesses and extend life; the QAnon movement claims such devices are kept by elite deep state members. In Büttner's sculptural paraphrase, the bed becomes a dark, sardonic form — programmed to move in sync with scenes from the accompanying film, hinting at the deception of conspiracy propagandists.
+
+The technical build coupled two high-voltage DC motors and a high-precision stepper motor to a video timeline via OSC, so every tilt, door movement, and scanning pass lands exactly on its cue in the film. Custom software handled synchronized video playback and multichannel audio, while an Arduino drove independent RGB LED animations. This is the kind of collaboration that makes up much of my freelance practice: an artist with a strong concept, a museum with a fixed opening date, and a machine that has to behave perfectly in public.
