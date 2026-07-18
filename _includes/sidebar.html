@@ -5,9 +5,9 @@
             projection mapping, custom electronics, and real-time software, made to work on opening night.</p>
 
         <nav class="sidebar-section sidebar-nav">
-            <a href="{{ '/' | relative_url }}">Selected Works</a>
-            <a href="{{ '/services.html' | relative_url }}">Services &amp; Hiring</a>
-            <a href="{{ '/about.html' | relative_url }}">About</a>
+            <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.layout == 'project' %} class="active" aria-current="page"{% endif %}>Selected Works</a>
+            <a href="{{ '/services.html' | relative_url }}"{% if page.url == '/services.html' %} class="active" aria-current="page"{% endif %}>Services &amp; Hiring</a>
+            <a href="{{ '/about.html' | relative_url }}"{% if page.url == '/about.html' %} class="active" aria-current="page"{% endif %}>About</a>
         </nav>
 
         <section class="sidebar-section">
