@@ -2,9 +2,6 @@
 layout: default
 ---
 <main class="projects-list">
-    <p class="clients-strip">Selected clients &amp; venues: Whitney Museum of American Art &middot; KW Institute
-        for Contemporary Art &middot; transmediale &middot; Kulturprojekte Berlin &middot; Akademie Schloss
-        Solitude &middot; Center for Performance Research &middot; Panorama Festival &middot; The New Inquiry</p>
     {% assign projects = site.projects | sort: "order" %}
     {% for project in projects %}
     <a href="{{ project.url | relative_url }}" class="project-row">
@@ -40,6 +37,10 @@ layout: default
         <div class="project-icon">{{ project.icon }}</div>
     </a>
     {% endfor %}
-    <a href="{{ '/services.html' | relative_url }}" class="hire-cta">Have a project? Services, process &amp; how
-        to hire me &rarr;</a>
+    <div class="index-footer">
+        <p class="clients-line">Selected clients &amp; venues: Whitney Museum &middot; KW Institute &middot;
+            transmediale &middot; Akademie Schloss Solitude &middot; Panorama Festival</p>
+        <a href="{{ '/services.html' | relative_url }}" class="hire-cta">Have a project? Services, process &amp;
+            how to hire me &rarr;</a>
+    </div>
 </main>

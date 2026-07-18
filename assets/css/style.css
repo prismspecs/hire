@@ -243,32 +243,35 @@ a {
 }
 
 /* =====================
-   INDEX — Clients strip & hire CTA
+   INDEX — Footer (clients + hire CTA)
    ===================== */
-.clients-strip {
-    font-family: var(--mono);
+.index-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2.4rem 1.4rem;
+    text-align: center;
+}
+
+.clients-line {
     font-size: 0.9rem;
-    line-height: 1.75;
+    line-height: 1.7;
     color: var(--muted);
-    padding: 1.2rem 1.4rem;
-    border-bottom: 1px solid var(--border);
+    max-width: 620px;
 }
 
 .hire-cta {
-    display: block;
-    padding: 1.5rem 1.4rem;
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     text-decoration: none;
     color: var(--text);
-    transition: background 0.12s ease;
 }
 
 .hire-cta:hover {
-    background: #f7f7f5;
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
 }
 
 /* =====================
