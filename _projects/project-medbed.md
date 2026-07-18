@@ -3,7 +3,7 @@ title: "MedBed"
 slug: project-medbed
 order: 5
 year: "2024"
-short_desc: "Engineering for Johannes Büttner's kinetic sculpture at KW Institute: industrial motors, LEDs, and multichannel audio choreographed in sync with film."
+short_desc: "Technical development for Johannes Büttner's kinetic sculpture at KW Institute: industrial motors, LEDs, and multichannel audio choreographed in sync with film."
 medium: "Custom Software<br>and Hardware"
 icon: "✚"
 thumb: assets/images/medbed/installation-view-front.jpg
@@ -11,7 +11,7 @@ hero_image: assets/images/medbed/installation-view-front.jpg
 hero_alt: "MedBed installation at KW Institute for Contemporary Art."
 meta:
   - "Medium: Custom Software and Hardware"
-  - "Role: Software Engineer & Technical Developer"
+  - "Role: Software Developer & Technical Lead"
   - "Context: Artwork by Johannes Büttner, KW Institute for Contemporary Art, Berlin"
   - "Exhibited in \"Amid the Alien Corn\" at KW Institute for Contemporary Art, Berlin.<br>Curator: Sofie Krogh Christensen."
   - "Technical implementation:<br>Custom software for synchronized video playback and multichannel audio.<br>Arduino microcontroller integration controlling RGB LEDs.<br>2 high voltage DC motors and 1 high precision stepper motor.<br>Motors programmed to tilt the bed, open doors, and perform scanning motions."
@@ -27,7 +27,7 @@ images:
     caption: "MedBed in action, with three industrial motors controlled via OSC signals synced to the video timeline, alongside independent LED animations."
 ---
 
-When artist Johannes Büttner was preparing his exhibition *Amid the Alien Corn* at KW Institute for Contemporary Art, he needed a sculpture that could perform: a bed that tilts, opens its doors, and scans its occupant in choreographed sync with a film. He brought me on as software engineer and technical developer to make that happen on an institutional deadline, and to make it robust enough to run for the length of a museum exhibition.
+When artist Johannes Büttner was preparing his exhibition *Amid the Alien Corn* at KW Institute for Contemporary Art, he needed a sculpture that could perform: a bed that tilts, opens its doors, and scans its occupant in choreographed sync with a film. He brought me on as software developer and technical lead to make that happen on an institutional deadline, and to make it robust enough to run for the length of a museum exhibition.
 
 MedBed is inspired by the conspiracy myth of a medical device that can heal all illnesses and extend life; the QAnon movement claims such devices are kept by elite deep state members. In Büttner's sculptural paraphrase, the bed becomes a dark, sardonic form, programmed to move in sync with scenes from the accompanying film, hinting at the deception of conspiracy propagandists.
 
