@@ -1,19 +1,32 @@
 <aside class="sidebar">
     <div class="sidebar-content">
         <a href="{{ '/' | relative_url }}" class="sidebar-name">Grayson Earle</a>
-        <p class="sidebar-intro">I build the technology behind
-            artworks, exhibitions, and live
-            performance: projection mapping,
-            custom electronics, and real-time
-            software, made to work on
-            opening night</p>
-        <nav class="sidebar-nav">
+        <p class="sidebar-intro">I build the technology behind artworks, exhibitions, and live performance:
+            projection mapping, custom electronics, and real-time software, made to work on opening night.</p>
+
+        <nav class="sidebar-section sidebar-nav">
             <a href="{{ '/' | relative_url }}">Selected Works</a>
             <a href="{{ '/services.html' | relative_url }}">Services &amp; Hiring</a>
             <a href="{{ '/about.html' | relative_url }}">About</a>
-            <a href="mailto:studio@graysonearle.com">studio@graysonearle.com</a>
         </nav>
-        <p class="sidebar-availability">&#9679; currently booking new projects</p>
-        <p class="sidebar-copyright">&copy; {{ site.time | date: '%Y' }}</p>
+
+        <section class="sidebar-section">
+            <h2 class="sidebar-label">Selected clients &amp; venues</h2>
+            <ul class="sidebar-clients">
+                <li>Whitney Museum of American Art</li>
+                <li>KW Institute for Contemporary Art</li>
+                <li>transmediale</li>
+                <li>Akademie Schloss Solitude</li>
+                <li>Panorama Festival</li>
+            </ul>
+        </section>
+
+        <section class="sidebar-section">
+            <h2 class="sidebar-label">Contact</h2>
+            <a href="mailto:studio@graysonearle.com" class="sidebar-email">studio@graysonearle.com</a>
+            <p class="sidebar-status"><span class="sidebar-dot"></span>Currently booking new projects</p>
+        </section>
+
+        <p class="sidebar-copyright">&copy; {{ site.time | date: '%Y' }} Grayson Earle</p>
     </div>
 </aside>
