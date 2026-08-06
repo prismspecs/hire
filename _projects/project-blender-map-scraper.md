@@ -23,6 +23,12 @@ images:
   - src: assets/images/project-blender-map-scraper/bms2.jpg
     alt: "A large imported 3D city."
     caption: "A large imported 3D city using OpenStreetMap data."
+  - src: assets/images/project-blender-map-scraper/bsm3.jpeg
+    alt: "Imported geometry from OpenStreetMap."
+    caption: "Imported geometry from OpenStreetMap."
+  - src: assets/images/project-blender-map-scraper/bsm5.png
+    alt: "Further details of imported architecture."
+    caption: "Further details of imported architecture."
 ---
 
 Blender Map Scraper is a Blender addon that imports Google 3D cities, OpenStreetMap data, and terrain. It provides global coverage and allows users to convert terrain into 3D printable objects.
