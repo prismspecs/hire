@@ -1,6 +1,5 @@
 :root {
     --paper: #f4f4f0;
-    --surface: #ffffff;
     --ink: #171717;
     --muted: #545652;
     --line: #d9d9d3;
@@ -107,7 +106,7 @@ img {
     color: var(--ink);
 }
 
-/* ============ Color bars — the page's only chroma ============ */
+/* ============ Color bars: the page's only chroma ============ */
 .bars {
     height: 9px;
     background: linear-gradient(90deg,
@@ -125,13 +124,11 @@ img {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 28px;
-    display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
-    gap: 44px;
 }
 
 .content {
     max-width: 42rem;
+    margin: 0 auto;
     padding-bottom: 90px;
 }
 
@@ -141,81 +138,6 @@ section.cue {
 
 section.cue:first-child {
     padding-top: 56px;
-}
-
-/* ============ Timeline rail ============ */
-.rail {
-    display: none;
-}
-
-@media (min-width: 1050px) {
-    .rail {
-        display: block;
-        position: sticky;
-        top: 52px;
-        height: calc(100vh - 52px);
-        overflow: hidden;
-    }
-
-    .rail-inner {
-        position: relative;
-        height: 100%;
-        padding: 22px 0;
-    }
-
-    .rail-line {
-        position: absolute;
-        left: 0;
-        top: 22px;
-        bottom: 22px;
-        border-left: 1px solid var(--line);
-    }
-
-    .rail-cue {
-        position: absolute;
-        left: 0;
-        transform: translateY(-50%);
-        padding-left: 16px;
-        white-space: nowrap;
-        font-size: 0.78rem;
-        color: var(--muted);
-        line-height: 1.2;
-    }
-
-    .rail-cue::before {
-        content: "";
-        position: absolute;
-        left: -3px;
-        top: 50%;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: var(--line-strong);
-        transform: translateY(-50%);
-    }
-
-    .rail-cue .tc {
-        display: block;
-        font-family: var(--font-mono);
-        font-size: 0.68rem;
-        color: #a3a49d;
-    }
-
-    .rail-cue.active {
-        color: var(--ink);
-        font-weight: 600;
-    }
-
-    .rail-cue.active .tc {
-        color: var(--ink);
-    }
-
-    .rail-cue.active::before {
-        background: var(--ink);
-        width: 7px;
-        height: 7px;
-        left: -4px;
-    }
 }
 
 /* ============ Hero ============ */
@@ -287,22 +209,6 @@ section.cue:first-child {
     object-fit: cover;
 }
 
-.hero-osd {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 22px;
-    padding: 10px 14px;
-    border: 1px solid var(--line-strong);
-    border-top: 0;
-    font-family: var(--font-mono);
-    font-size: 0.74rem;
-    color: var(--muted);
-}
-
-.hero-osd .now {
-    color: var(--ink);
-}
-
 /* ============ Sections ============ */
 .cue-head h2 {
     font-size: clamp(1.7rem, 3.6vw, 2.5rem);
@@ -341,6 +247,11 @@ section.cue:first-child {
 }
 
 /* ============ Tables ============ */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .tab {
     width: 100%;
     border-collapse: collapse;
@@ -383,6 +294,10 @@ section.cue:first-child {
     font-family: var(--font-mono);
     font-size: 0.72rem;
     color: var(--muted);
+}
+
+.compare {
+    min-width: 620px;
 }
 
 .compare th.this,
@@ -535,13 +450,9 @@ section.cue:first-child {
 
 /* ============ Responsive ============ */
 @media (max-width: 1049px) {
-    .page {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
     .product {
         grid-template-columns: 1fr;
+        gap: 28px;
     }
 }
 
@@ -568,6 +479,15 @@ section.cue:first-child {
         font-size: clamp(2.3rem, 11vw, 3.4rem);
     }
 
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-cta .btn {
+        justify-content: center;
+    }
+
     .log-row {
         grid-template-columns: 96px 1fr;
         gap: 14px;
@@ -576,6 +496,26 @@ section.cue:first-child {
     .io-row {
         grid-template-columns: 108px 1fr;
         gap: 12px;
+    }
+
+    .contact-box {
+        padding: 26px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tc-readout {
+        display: none;
+    }
+
+    .tab th,
+    .tab td {
+        padding: 11px 10px;
+    }
+
+    .io-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
     }
 }
 
