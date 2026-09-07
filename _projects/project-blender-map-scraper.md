@@ -6,7 +6,7 @@ year: "2024"
 short_desc: "A Blender addon that imports Google 3D cities, OpenStreetMap data, and terrain, allowing users to convert terrain into 3D printable objects."
 medium: "Blender Addon<br>Python"
 icon: "✦"
-thumb: assets/images/project-blender-map-scraper/bms2.jpg
+thumb: assets/images/project-blender-map-scraper/bms1.png
 hero_video: assets/images/project-blender-map-scraper/output.mp4
 hero_image: assets/images/project-blender-map-scraper/bms2.jpg
 hero_alt: "A 3D city imported into Blender."
