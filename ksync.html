@@ -1,0 +1,318 @@
+---
+layout: ksync
+title: "kSync — Open-Source Media Synchronization"
+permalink: /ksync
+description: "kSync is an open-source, plug-and-play media synchronization device from Berlin. Frame-accurate video, lighting, and show control from one timeline. €350 per node, deployed in under 2 minutes."
+---
+
+<header class="hero">
+    <div class="wrap">
+        <span class="hero-eyebrow reveal">Open-source media synchronization</span>
+        <h1 class="reveal">One timeline.<br><span class="em">Every screen,</span><br>every light.</h1>
+        <p class="hero-sub reveal">
+            kSync keeps walls of displays frame-locked to sub-10ms precision, and drives lighting, sound,
+            and physical automation from the same timeline — on affordable hardware your team can deploy in minutes.
+        </p>
+        <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="mailto:studio@graysonearle.com">Get in touch →</a>
+            <a class="btn btn-ghost" href="#product">See how it works</a>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="hero-visual">
+            <img src="{{ '/assets/images/ksync/hero.jpg' | relative_url }}" alt="A multi-screen synchronized video installation running with kSync at a Berlin exhibition.">
+            <span class="hero-caption">Live 24/7 deployment · Berlin art exhibition · 11 displays locked together</span>
+        </div>
+    </div>
+</header>
+
+<div class="strip">
+    <div class="wrap">
+        <div class="strip-inner" data-stagger>
+            <div class="strip-item reveal">
+                <div class="strip-num">€350<span class="unit">/node</span></div>
+                <div class="strip-label">Up to 70% cheaper than nearest competitor over 3 years.</div>
+            </div>
+            <div class="strip-item reveal">
+                <div class="strip-num">&lt;2<span class="unit">min</span></div>
+                <div class="strip-label">From unboxing to live sync. No IT expert required.</div>
+            </div>
+            <div class="strip-item reveal">
+                <div class="strip-num">sub-10<span class="unit">ms</span></div>
+                <div class="strip-label">Broadcast-grade frame synchronization across the network.</div>
+            </div>
+            <div class="strip-item reveal">
+                <div class="strip-num">€0<span class="unit">license</span></div>
+                <div class="strip-label">Fully open source. You own your data and your install — forever.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="section alt" id="problem">
+    <div class="wrap">
+        <div class="split">
+            <div class="problem-card reveal">
+                <span class="tag">The problem</span>
+                <h3>Professional media sync is priced out of reach for most artists and institutions.</h3>
+                <p>
+                    Coordinating video, lighting, sound, and automation across multiple displays currently costs
+                    €500 to €8,000+ per node — plus a technician day-rate to set it up. And every ambitious venue
+                    ends up trapped: reinventing the same fragile solution from scratch with expensive software
+                    like QLab, at the cost of weeks and thousands of euros.
+                </p>
+                <div class="price-vs mono">
+                    <span class="big" id="ourprice">€350</span>
+                    <span class="vs">vs</span>
+                    <span class="strike" id="theirprice">€1,167+</span>
+                    <span class="vs">3-year cost of a BrightSign node</span>
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay:120ms;">
+                <h2>Professional sync should be a tool anyone can afford to keep.</h2>
+                <div class="body">
+                    <p>
+                        Independent artists, smaller museums and galleries, universities, and event organizers are
+                        shut out of display-synchronized work by pricing built for enterprise budgets. kSync exists
+                        to change that — with hardware that costs a fraction of the alternatives and none of the lock-in.
+                    </p>
+                    <p>
+                        <strong>We want sync to be the default, not the privilege.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="product">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <h2>More than a media player. A conductor for your whole environment.</h2>
+            <p class="lede">
+                kSync is a dedicated, stripped-down Linux appliance. One web-based timeline orchestrates video,
+                lighting, sound, and physical automation — everything scheduled against a single accurate media clock.
+            </p>
+        </div>
+
+        <ul class="proto-list reveal" data-stagger>
+            <li class="reveal"><span class="name">Video</span> Frame-accurate synchronized playback across any number of displays.</li>
+            <li class="reveal"><span class="name">Lighting</span> Trigger DMX and Art-Net cues in time with the picture.</li>
+            <li class="reveal"><span class="name">Sound</span> Send OSC and MIDI to spatial audio and synthesizers.</li>
+            <li class="reveal"><span class="name">Motion</span> Control motors, relays, and kinetic sculpture via Arduino &amp; serial.</li>
+            <li class="reveal"><span class="name">Web</span> Fire HTTP and WebSocket messages to APIs and external systems.</li>
+        </ul>
+
+        <div class="split" style="margin-top:72px;">
+            <div class="reveal">
+                <h2>Deployed in minutes. No IT department needed.</h2>
+                <div class="body">
+                    <p>
+                        Provisioning a node is as simple as plugging in a USB drive with your media and a config
+                        file. The device boots, finds its role, and starts syncing — a genuinely zero-config install,
+                        not "easy setup" marketing.
+                    </p>
+                    <p>
+                        Each node is an optimized Raspberry Pi in a custom enclosure: energy-efficient, silent,
+                        and serviced with open-source tooling your own team can maintain.
+                    </p>
+                </div>
+            </div>
+            <div class="reveal" style="transition-delay:120ms;">
+                <div style="border-radius:14px;overflow:hidden;border:1px solid var(--line);">
+                    <img src="{{ '/assets/images/ksync/pi-case.jpg' | relative_url }}" alt="The kSync hardware node — an optimized Raspberry Pi in a custom enclosure.">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt" id="compare">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <h2 id="open">Open source isn't a feature. It's the point.</h2>
+            <p class="lede">
+                You own your installation, your data, and your hardware forever. No forced upgrades, no subscription
+                creep, no vendor that can hold your show hostage.
+            </p>
+        </div>
+
+        <div class="reveal" style="overflow-x:auto;">
+            <table class="compare">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="this">kSync</th>
+                        <th>BrightSign XD235</th>
+                        <th>Mac Mini + QLab</th>
+                        <th>Pandoras Box</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="row-label">Hardware cost</td>
+                        <td class="this">€200–350</td>
+                        <td>€550–750</td>
+                        <td>€700–950</td>
+                        <td>€3,000–6,000+</td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">Software / license</td>
+                        <td class="this">€0 · open source</td>
+                        <td>€0 local,<br>$139/yr cloud</td>
+                        <td>~$1,150 license</td>
+                        <td>€2,000–5,000</td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">Show control</td>
+                        <td class="this">Native timeline<br>(DMX, MIDI, OSC…)</td>
+                        <td>Custom scripting,<br>relay boxes</td>
+                        <td>Multi-protocol<br>cues</td>
+                        <td>Complex node<br>timelines</td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">3-year total cost</td>
+                        <td class="this">~€350</td>
+                        <td>~€1,167</td>
+                        <td>~€2,000</td>
+                        <td>~€8,000+</td>
+                    </tr>
+                    <tr>
+                        <td class="row-label">Vendor lock-in</td>
+                        <td class="this">None — you own it</td>
+                        <td>Proprietary OS</td>
+                        <td>Consumer OS</td>
+                        <td>Proprietary</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="compare-note">Figures based on public pricing from listed vendors; kSync targets shown. QLab and Pandoras Box figures include required licensing and specialist setup.</p>
+    </div>
+</section>
+
+<section class="section" id="proof">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <h2>Built and proven by artists, for artists.</h2>
+            <p class="lede">
+                kSync began with a friend's €6,000 rental quote for display control he couldn't afford to keep.
+                We built a better answer for less — and kept building.
+            </p>
+        </div>
+
+        <div class="trac-list reveal" data-stagger>
+            <div class="trac-row reveal">
+                <div class="metric">24/7</div>
+                <div class="fact">Live public Berlin exhibition</div>
+                <div class="detail">Constant uptime, 11 displays synchronized in real use.</div>
+            </div>
+            <div class="trac-row reveal">
+                <div class="metric">&lt;2 min</div>
+                <div class="fact">Unboxing to live sync</div>
+                <div class="detail">Zero-config USB deployment validated on-site.</div>
+            </div>
+            <div class="trac-row reveal">
+                <div class="metric">100%</div>
+                <div class="fact">Uptime across the deployment</div>
+                <div class="detail">Stability designed for permanent museum-grade installs.</div>
+            </div>
+            <div class="trac-row reveal">
+                <div class="metric">Sub-10ms</div>
+                <div class="fact">Sync precision validated</div>
+                <div class="detail">Broadcast-grade frame accuracy on standard networking.</div>
+            </div>
+        </div>
+
+        <div style="margin-top:56px;">
+            <div class="section-head" style="margin-bottom:28px;">
+                <h2>Recognition &amp; partnerships</h2>
+            </div>
+            <div class="value-list reveal" data-stagger>
+                <div class="value-item reveal">
+                    <div class="num">EXIST</div>
+                    <h3>Startup grant</h3>
+                    <p>Funding approved from Germany's flagship startup program.</p>
+                </div>
+                <div class="value-item reveal">
+                    <div class="num">IBB</div>
+                    <h3>Start-up Bonus Plus</h3>
+                    <p>Berlin Innovation grant approved to support early traction.</p>
+                </div>
+                <div class="value-item reveal">
+                    <div class="num">HBK</div>
+                    <h3>Braunschweig University of Art</h3>
+                    <p>Research and validation partnership for institutional use.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt" id="company">
+    <div class="wrap">
+        <div class="section-head reveal">
+            <h2>A sustainable business, intentionally bootstrapped.</h2>
+            <p class="lede">
+                kSync pairs affordable hardware with high-margin services — a model that funds itself without
+                diluting control or chasing growth at the expense of the community it serves.
+            </p>
+        </div>
+        <div class="value-list reveal" data-stagger>
+            <div class="value-item reveal">
+                <div class="num">Hardware</div>
+                <h3>€350 per node</h3>
+                <p>One-time purchase, ~50% gross margin, 100% transparent. No licensing fees ever.</p>
+            </div>
+            <div class="value-item reveal">
+                <div class="num">Services</div>
+                <h3>Support &amp; SLAs</h3>
+                <p>Premium maintenance, custom integration, and fleet management for institutions at scale.</p>
+            </div>
+            <div class="value-item reveal">
+                <div class="num">Open core</div>
+                <h3>Free software</h3>
+                <p>Built on the same open-core model as Arduino. The community owns the software.</p>
+            </div>
+        </div>
+
+        <div style="margin-top:64px;">
+            <div class="split">
+                <div class="reveal">
+                    <h2>The founder</h2>
+                    <div class="body">
+                        <p>
+                            kSync is founded and built by <strong>Grayson Earle</strong>, a Berlin-based media artist
+                            who has worked with the Whitney, KW Institute, and transmediale — so the product is shaped
+                            by the actual creative community it serves, not an enterprise sales team.
+                        </p>
+                    </div>
+                </div>
+                <div class="reveal" style="transition-delay:120ms;">
+                    <h2>Where we work</h2>
+                    <div class="body">
+                        <p>
+                            Based in <strong>Berlin, Germany</strong> — European design and local German manufacturing
+                            for regulatory compliance and lower transport footprints, aligned with EU open-source
+                            procurement priorities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band" id="contact">
+    <div class="wrap">
+        <h2 class="reveal">Ready to hear the full story?</h2>
+        <p class="reveal">For funders, grant programs, and institutions: let's talk about kSync, its roadmap, and how we can work together.</p>
+        <div class="cta-actions reveal">
+            <a class="btn btn-primary" href="mailto:studio@graysonearle.com">Email the founder →</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/grayson-earle/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+        <div class="contact-block reveal">
+            <a href="mailto:studio@graysonearle.com">studio@graysonearle.com</a> · +49 177 380 1347 · Berlin, Germany
+        </div>
+    </div>
+</section>

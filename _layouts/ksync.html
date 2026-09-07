@@ -1,0 +1,58 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: "kSync — Open-Source Media Synchronization" }}</title>
+    <meta name="description" content="{{ page.description | default: 'kSync is an open-source, plug-and-play media synchronization device. Frame-accurate video, lighting, and show control from one timeline. €350 per node, deployed in under 2 minutes, no licensing fees.' }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/ksync.css' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="wrap nav-inner">
+        <a href="{{ '/ksync' | relative_url }}" class="nav-mark">
+            <span class="lock-dot"></span>
+            <span>kSy<span class="k">nc</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="#product">Product</a>
+            <a href="#compare">Why open-source</a>
+            <a href="#proof">Proof</a>
+            <a href="#company">Company</a>
+            <a href="mailto:studio@graysonearle.com" class="nav-cta">Contact</a>
+        </div>
+    </div>
+</nav>
+
+{{ content }}
+
+<footer class="footer">
+    <div class="wrap footer-inner">
+        <span class="nav-mark"><span class="lock-dot"></span><span>kSy<span class="k">nc</span></span></span>
+        <span>Open-source media synchronization · Berlin, Germany</span>
+        <span><a href="https://www.linkedin.com/in/grayson-earle/">LinkedIn</a> · <a href="mailto:studio@graysonearle.com">studio@graysonearle.com</a> · <a href="https://github.com/prismspecs/kitchenSync">GitHub</a></span>
+    </div>
+</footer>
+
+<script>
+    document.documentElement.classList.add('js');
+    (function () {
+        var items = document.querySelectorAll('.reveal');
+        if (!items.length || !('IntersectionObserver' in window)) return;
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        items.forEach(function (el) { io.observe(el); });
+    })();
+</script>
+</body>
+</html>
