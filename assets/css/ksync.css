@@ -5,7 +5,6 @@
     --line: #d9d9d3;
     --line-strong: #b4b5ad;
     --font-sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-mono: "Fragment Mono", ui-monospace, "SF Mono", Menlo, monospace;
     --bar-w: #bfbfbf;
     --bar-y: #bfbf00;
     --bar-c: #00bfbf;
@@ -90,7 +89,7 @@ img {
 }
 
 .tc-readout {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.78rem;
     font-variant-numeric: tabular-nums;
     color: #2a2c2a;
@@ -284,14 +283,14 @@ section.cue:first-child {
 }
 
 .tab .num {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
 
 .tab-caption {
     margin-top: 14px;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.72rem;
     color: var(--muted);
 }
@@ -360,7 +359,7 @@ section.cue:first-child {
 .cap {
     padding: 8px 12px;
     border-top: 1px solid var(--line);
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.7rem;
     color: var(--muted);
 }
@@ -376,7 +375,7 @@ section.cue:first-child {
     gap: 22px;
     padding: 12px 0;
     border-bottom: 1px solid var(--line);
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.84rem;
 }
 
@@ -399,7 +398,7 @@ section.cue:first-child {
 
 .contact-email {
     display: block;
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: clamp(1.15rem, 3vw, 1.5rem);
     color: var(--ink);
     text-decoration: none;
