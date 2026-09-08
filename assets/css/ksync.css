@@ -228,6 +228,10 @@ section.cue:first-child {
     margin-bottom: 26px;
 }
 
+.cue-lede.wide {
+    max-width: none;
+}
+
 .copy p {
     color: var(--ink);
     max-width: 40em;
