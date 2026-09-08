@@ -223,13 +223,8 @@ section.cue:first-child {
 
 .cue-lede {
     color: var(--muted);
-    max-width: 42em;
     line-height: 1.6;
     margin-bottom: 26px;
-}
-
-.cue-lede.wide {
-    max-width: none;
 }
 
 .copy p {
