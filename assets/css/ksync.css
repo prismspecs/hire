@@ -389,13 +389,6 @@ section.cue:first-child {
 }
 
 /* ============ Record / log ============ */
-.record {
-    display: grid;
-    grid-template-columns: 1.25fr 0.85fr;
-    gap: 44px;
-    align-items: start;
-}
-
 .log {
     border-top: 1px solid var(--line-strong);
 }
@@ -417,6 +410,18 @@ section.cue:first-child {
 
 .log-v {
     color: var(--ink);
+}
+
+.record-banner {
+    margin-top: 26px;
+    border: 1px solid var(--line-strong);
+}
+
+.record-banner img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1600 / 740;
+    object-fit: cover;
 }
 
 /* ============ Contact ============ */
@@ -479,8 +484,7 @@ section.cue:first-child {
 
 /* ============ Responsive ============ */
 @media (max-width: 1049px) {
-    .product,
-    .record {
+    .product {
         grid-template-columns: 1fr;
         gap: 28px;
     }
