@@ -128,7 +128,7 @@ img {
 .content {
     max-width: 54rem;
     margin: 0 auto;
-    padding-bottom: 90px;
+    padding-bottom: 78px;
 }
 
 section.cue {
@@ -414,7 +414,6 @@ section.cue:first-child {
 
 /* ============ Contact ============ */
 .contact-box {
-    margin-top: 64px;
     border: 1px solid var(--line-strong);
     border-top: 3px solid var(--ink);
     padding: 34px 30px;
