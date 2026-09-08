@@ -389,6 +389,13 @@ section.cue:first-child {
 }
 
 /* ============ Record / log ============ */
+.record {
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 44px;
+    align-items: start;
+}
+
 .log {
     border-top: 1px solid var(--line-strong);
 }
@@ -472,7 +479,8 @@ section.cue:first-child {
 
 /* ============ Responsive ============ */
 @media (max-width: 1049px) {
-    .product {
+    .product,
+    .record {
         grid-template-columns: 1fr;
         gap: 28px;
     }
