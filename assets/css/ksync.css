@@ -268,8 +268,10 @@ section.cue:first-child {
 }
 
 .tab thead th {
-    font-weight: 600;
-    font-size: 0.8rem;
+    font-weight: 700;
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: var(--muted);
     border-bottom: 1px solid var(--line-strong);
 }
@@ -299,6 +301,26 @@ section.cue:first-child {
 
 .compare {
     min-width: 620px;
+    table-layout: fixed;
+    font-size: 0.89rem;
+}
+
+.compare th,
+.compare td {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.compare th:first-child,
+.compare td:first-child {
+    width: 16%;
+    padding-left: 14px;
+    white-space: nowrap;
+}
+
+.compare th:not(:first-child),
+.compare td:not(:first-child) {
+    width: 21%;
 }
 
 .compare th.this,
