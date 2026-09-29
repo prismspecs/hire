@@ -2,23 +2,23 @@
 title: "kSync"
 slug: project-ksync
 order: 4
-year: "2024–2025"
-short_desc: "An open-source platform that keeps walls of displays frame-locked on affordable Raspberry Pi hardware, with sub-10ms accuracy, show control, and 24/7 exhibition reliability."
+year: "2023–"
+short_desc: "A media sync and show-control device that keeps walls of displays frame-locked to sub-10ms and runs lights, sound, and motors on the same timeline. 30+ units deployed in Berlin exhibitions."
 medium: "Distributed Media Synchronization<br>and Show Control"
 icon: "▷"
 thumb: assets/images/ksync/installation-view1.jpg
 hero_image: assets/images/ksync/installation-view1.jpg
 hero_alt: "Multi-screen synchronized video installation at Berlin exhibition."
 meta:
-  - "Medium: Open-source Media Synchronization and Automation"
+  - "Medium: Media Synchronization and Show Control"
   - "Role: Founder & Lead Developer"
-  - "Context: Field-proven in 24/7 public Berlin art exhibitions"
+  - "Context: 30+ units deployed in public Berlin exhibitions since 2023"
   - "Sync accuracy: sub-10ms across all displays, on standard network hardware"
   - "Show control: one timeline drives video, DMX lighting, MIDI, motors, and WebSockets"
-  - "Cost: roughly 70% cheaper over 3 years than proprietary sync hardware"
+  - "Price: €500 per unit, no licence fees"
 link:
   url: https://github.com/prismspecs/kitchenSync
-  text: github.com/prismspecs/ksync
+  text: source on GitHub
 images:
   - src: assets/images/ksync/installation-view2.jpg
     alt: "kSync synchronized 11 displays and coordinated kinetic rotations via serial motor control."
@@ -31,7 +31,7 @@ images:
     caption: "Vertical display synchronization in a gallery environment."
 ---
 
-Galleries that want a wall of screens playing in perfect sync usually face an ugly choice: proprietary media servers that cost more than the artwork, or fragile DIY scripts that drift out of alignment mid-exhibition. kSync is my answer to that problem: an open-source media synchronization and automation platform running on a custom Embedded Linux distribution for Raspberry Pi hardware, built for artists and institutions that need frame-accurate playback without the enterprise price tag.
+Galleries that want a wall of screens playing in perfect sync usually face an ugly choice: proprietary media servers that cost more than the artwork, or fragile DIY scripts that drift out of alignment mid-exhibition. kSync is my answer to that problem: a media synchronization and automation device running a custom Embedded Linux distribution, built for artists and institutions that need frame-accurate playback without the enterprise price tag.
 
 The software engine uses GStreamer for video processing and implements a multi-tier synchronization strategy. A central Leader node broadcasts UDP sync packets while Collaborator nodes calculate temporal deviation using an exponentially weighted moving average filter to compensate for network latency. Minor offsets are corrected by a proportional controller that gently adjusts playback rate; larger deviations trigger accurate flushing seeks. The result is sub-10ms alignment with no visible stutter.
 
